@@ -40,7 +40,7 @@ function UpgradePlanModal({
         <div className="flex flex-col items-center justify-center space-y-3 border-b border-gray-200 px-4 pt-8 pb-24 sm:px-16">
           <BlurImage
             src="/_static/logo.png"
-            alt="Dub logo"
+            alt="CoreWave logo"
             className="h-10 w-10 rounded-full border border-gray-200"
             width={20}
             height={20}
@@ -119,7 +119,7 @@ function UpgradePlanModal({
             )}
           </button>
           <a
-            href="mailto:steven@dub.sh?subject=Upgrade%20to%20Enterprise%20Plan"
+            href="mailto:info@dcorewave.xyz?subject=Upgrade%20to%20Enterprise%20Plan"
             className="text-sm text-gray-500 transition-all hover:text-gray-700"
           >
             Or contact us for Enterprise

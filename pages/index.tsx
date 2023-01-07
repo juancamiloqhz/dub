@@ -68,7 +68,7 @@ export async function getStaticProps() {
   const userCount = await prisma.user.count();
 
   const { stargazers_count: stars } = await fetch(
-    "https://api.github.com/repos/steven-tey/dub",
+    "https://api.github.com/repos/juancamiloqhz/dub",
     {
       // optional – feel free to remove if you don't want to display star count
       ...(process.env.GITHUB_OAUTH_TOKEN && {
@@ -80,13 +80,13 @@ export async function getStaticProps() {
     },
   ).then((res) => res.json());
 
-  const tweets = await getTweetsMetadata(homepageTweets);
+  // const tweets = await getTweetsMetadata(homepageTweets);
 
   return {
     props: {
       userCount,
       stars,
-      tweets,
+      tweets: [],
     },
     revalidate: 60,
   };

@@ -1,9 +1,9 @@
 export const LOCALHOST_GEO_DATA = {
-  city: "San Francisco",
-  region: "CA",
-  country: "US",
-  latitude: "37.7695",
-  longitude: "-122.385",
+  city: "Medellín",
+  region: "ANT",
+  country: "CO",
+  latitude: "6.2476",
+  longitude: "75.5658",
 };
 
 export const INTERVALS = [
@@ -55,8 +55,8 @@ export const FADE_IN_ANIMATION_SETTINGS = {
 
 export const HOME_HOSTNAMES = new Set([
   // comment for better diffs
-  "dub.sh",
-  "preview.dub.sh",
+  "corewave.xyz",
+  "preview.corewave.xyz",
   "localhost:3000",
 ]);
 
@@ -84,18 +84,18 @@ export const RESERVED_KEYS = new Set([
   "demo",
 ]);
 export const DEFAULT_REDIRECTS = {
-  home: "https://dub.sh",
-  signin: "https://app.dub.sh/login",
-  login: "https://app.dub.sh/login",
-  register: "https://app.dub.sh/register",
-  signup: "https://app.dub.sh/register",
-  app: "https://app.dub.sh",
-  dashboard: "https://app.dub.sh",
-  links: "https://app.dub.sh/links",
-  settings: "https://app.dub.sh/settings",
-  welcome: "https://app.dub.sh/welcome",
-  slack: "https://dub.slack.com",
-  discord: "https://twitter.com/dubdotsh", // placeholder for now
+  home: "https://corewave.xyz",
+  signin: "https://app.corewave.xyz/login",
+  login: "https://app.corewave.xyz/login",
+  register: "https://app.corewave.xyz/register",
+  signup: "https://app.corewave.xyz/register",
+  app: "https://app.corewave.xyz",
+  dashboard: "https://app.corewave.xyz",
+  links: "https://app.corewave.xyz/links",
+  settings: "https://app.corewave.xyz/settings",
+  welcome: "https://app.corewave.xyz/welcome",
+  slack: "https://corewave.slack.com",
+  discord: "https://twitter.com/corewave", // placeholder for now
 };
 
 export const FREE_PLAN_PROJECT_LIMIT = 5;
@@ -119,8 +119,8 @@ export const SPECIAL_APEX_DOMAINS = {
 
 export const DEFAULT_LINK_PROPS = {
   key: "github",
-  url: "https://github.com/steven-tey/dub",
-  domain: "dub.sh",
+  url: "https://github.com/juancamiloqhz/dub",
+  domain: "corewave.xyz",
   archived: false,
   expiresAt: null,
   password: null,

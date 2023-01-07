@@ -171,7 +171,7 @@ const sendUsageLimitEmail = async (
 ) => {
   return await Promise.all([
     sendMail({
-      subject: `You have exceeded your Dub usage limit`,
+      subject: `You have exceeded your CoreWave usage limit`,
       to: email,
       component: (
         <UsageExceeded usage={usage} usageLimit={usageLimit} type={type} />

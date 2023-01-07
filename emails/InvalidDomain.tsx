@@ -44,8 +44,11 @@ export default function InvalidDomain({
                     {domain}
                   </a>
                 </code>{" "}
-                for your Dub project{" "}
-                <a href={`https://app.dub.sh/${projectSlug}`} target="_blank">
+                for your CoreWave project{" "}
+                <a
+                  href={`https://app.corewave.xyz/${projectSlug}`}
+                  target="_blank"
+                >
                   {projectSlug}↗
                 </a>{" "}
                 has been invalid for {invalidDays} days.
@@ -56,13 +59,13 @@ export default function InvalidDomain({
                 configure your domain.
               </MjmlText>
               <ButtonPrimary
-                link={`https://app.dub.sh/${projectSlug}/settings`}
+                link={`https://app.corewave.xyz/${projectSlug}/settings`}
                 uiText="Configure my domain"
               />
               <MjmlText cssClass="paragraph">
-                If you do not want to keep this project on Dub, you can{" "}
+                If you do not want to keep this project on CoreWave, you can{" "}
                 <a
-                  href={`https://app.dub.sh/${projectSlug}/settings`}
+                  href={`https://app.corewave.xyz/${projectSlug}/settings`}
                   target="_blank"
                 >
                   delete it
@@ -75,7 +78,7 @@ export default function InvalidDomain({
                   : "this will be the last time I'll email you about this."}
               </MjmlText>
               <MjmlText cssClass="paragraph" color={grayDark}>
-                Steven from Dub
+                Juan from CoreWave
               </MjmlText>
               <Divider />
             </MjmlColumn>

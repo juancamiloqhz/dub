@@ -1,30 +1,32 @@
 import { buildSendMail } from "mailing-core";
 import nodemailer from "nodemailer";
 
+// Transactional emails
 const sendMail = buildSendMail({
   transport: nodemailer.createTransport({
-    host: "smtp.postmarkapp.com",
+    host: "smtp.sendgrid.net",
     port: 587,
     auth: {
-      user: process.env.POSTMARK_API_KEY,
-      pass: process.env.POSTMARK_API_KEY,
+      user: "apikey",
+      pass: process.env.SENDGRID_API_KEY,
     },
   }),
-  defaultFrom: "Steven from Dub <steven@dub.sh>",
+  defaultFrom: "Juan from CoreWave <info@corewave.xyz>",
   configPath: "./mailing.config.json",
 });
 
 export default sendMail;
 
+// Marketing emails
 export const sendMarketingMail = buildSendMail({
   transport: nodemailer.createTransport({
-    host: "smtp-broadcasts.postmarkapp.com",
+    host: "smtp.sendgrid.net",
     port: 587,
     auth: {
-      user: process.env.POSTMARK_MARKETING_API_KEY,
-      pass: process.env.POSTMARK_MARKETING_API_SECRET,
+      user: "apikey",
+      pass: process.env.SENDGRID_MARKETING_API_SECRET,
     },
   }),
-  defaultFrom: "Steven from Dub <steven@ship.dub.sh>",
+  defaultFrom: "Juan from CoreWave <info@corewave.xyz>",
   configPath: "./mailing.config.json",
 });

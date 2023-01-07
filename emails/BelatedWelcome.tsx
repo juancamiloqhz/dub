@@ -23,26 +23,26 @@ export default function WelcomeEmail({
       <Head />
       <MjmlBody width={500}>
         <MjmlWrapper cssClass="container">
-          <Header title="A Belated Welcome to Dub" />
+          <Header title="A Belated Welcome to CoreWave" />
           <MjmlSection padding="0">
             <MjmlColumn>
               <MjmlImage
                 cssClass="hero"
                 padding="0"
                 align="left"
-                src="https://raw.githubusercontent.com/steven-tey/dub/main/public/_static/thumbnail.png"
+                src="https://raw.githubusercontent.com/juancamiloqhz/dub/main/public/_static/thumbnail.png"
               />
             </MjmlColumn>
           </MjmlSection>
           <MjmlSection cssClass="smooth">
             <MjmlColumn>
               <MjmlText cssClass="paragraph">
-                Welcome to Dub - the open-source Bitly alternative!
+                Welcome to CoreWave - the open-source Bitly alternative!
               </MjmlText>
               <MjmlText cssClass="paragraph">
                 Apologies for the belated welcome message - I just{" "}
                 <a
-                  href="https://twitter.com/steventey/status/1579471673325408257"
+                  href="https://twitter.com/juancamiloqhz/status/1579471673325408257"
                   target="_blank"
                 >
                   got transactional emails working
@@ -51,8 +51,8 @@ export default function WelcomeEmail({
               </MjmlText>
               {domains ? (
                 <MjmlText cssClass="paragraph">
-                  I noticed that you've been successfully using Dub with your
-                  custom domain
+                  I noticed that you've been successfully using CoreWave with
+                  your custom domain
                   {domains.length > 1 ? "s" : ""}{" "}
                   {domains.map((domain) => (
                     <span key={domain}>
@@ -71,11 +71,11 @@ export default function WelcomeEmail({
                     </span>
                   ))}{" "}
                   and I wanted to reach out to ask if you have any feedback or
-                  suggestions for Dub? I'd love to hear from you!
+                  suggestions for CoreWave? I'd love to hear from you!
                 </MjmlText>
               ) : (
                 <MjmlText cssClass="paragraph">
-                  I noticed that you recently signed up for Dub but haven't
+                  I noticed that you recently signed up for CoreWave but haven't
                   successfully connected a custom domain yet, and I wanted to
                   reach out to ask if you have any questions about that?
                 </MjmlText>
@@ -84,7 +84,7 @@ export default function WelcomeEmail({
                 In case you missed it, I also revamped our pricing model and
                 made it more affordable for everyone. You can read more about it{" "}
                 <a
-                  href="https://twitter.com/dubdotsh/status/1579466952594292737"
+                  href="https://twitter.com/corewave/status/1579466952594292737"
                   target="_blank"
                 >
                   here
@@ -96,22 +96,22 @@ export default function WelcomeEmail({
               </MjmlText>
               <MjmlText cssClass="li">
                 •&nbsp;&nbsp;Follow us on{" "}
-                <a href="https://twitter.com/dubdotsh/" target="_blank">
+                <a href="https://twitter.com/corewave/" target="_blank">
                   Twitter
                 </a>
               </MjmlText>
               <MjmlText cssClass="li">
                 •&nbsp;&nbsp;Star the repo on{" "}
-                <a href="https://github.com/steven-tey/dub" target="_blank">
+                <a href="https://github.com/juancamiloqhz/dub" target="_blank">
                   GitHub
                 </a>
               </MjmlText>
               {domains ? (
                 <MjmlText cssClass="paragraph" color={grayDark}>
                   P.S.: You'll receive an email from Trustpilot in the next
-                  couple of days - if you enjoyed using Dub, it would mean a lot
-                  if you could leave a review; if not, I'd love to hear what I
-                  can do to improve Dub!
+                  couple of days - if you enjoyed using CoreWave, it would mean
+                  a lot if you could leave a review; if not, I'd love to hear
+                  what I can do to improve CoreWave!
                 </MjmlText>
               ) : (
                 <MjmlText cssClass="paragraph">
@@ -119,7 +119,7 @@ export default function WelcomeEmail({
                 </MjmlText>
               )}
               <MjmlText cssClass="paragraph" color={grayDark}>
-                Steven from Dub
+                Juan from CoreWave
               </MjmlText>
               <Divider />
             </MjmlColumn>

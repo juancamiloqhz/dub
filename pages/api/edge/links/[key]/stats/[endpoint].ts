@@ -12,7 +12,7 @@ export default async function handler(req: NextRequest) {
     const endpoint = req.nextUrl.searchParams.get("endpoint");
 
     const response = await getStats({
-      domain: "dub.sh",
+      domain: "corewave.xyz",
       key,
       endpoint,
       interval,

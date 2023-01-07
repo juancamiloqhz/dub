@@ -1,6 +1,6 @@
-<a href="https://dub.sh">
-  <img alt="Dub – an open-source link management tool for modern marketing teams to create, share, and track short links." src="https://user-images.githubusercontent.com/28986134/200727801-6355c62e-60b5-45d7-a83d-44b11545e471.png">
-  <h1 align="center">Dub</h1>
+<a href="https://corewave.xyz">
+  <img alt="CoreWave – an open-source link management tool for modern marketing teams to create, share, and track short links." src="https://user-images.githubusercontent.com/28986134/200727801-6355c62e-60b5-45d7-a83d-44b11545e471.png">
+  <h1 align="center">CoreWave</h1>
 </a>
 
 <p align="center">
@@ -8,12 +8,12 @@
 </p>
 
 <p align="center">
-  <a href="https://twitter.com/dubdotsh">
-    <img src="https://img.shields.io/twitter/follow/dubdotsh?style=flat&label=%40dubdotsh&logo=twitter&color=0bf&logoColor=fff" alt="Twitter" />
+  <a href="https://twitter.com/corewave">
+    <img src="https://img.shields.io/twitter/follow/corewave?style=flat&label=%40corewave&logo=twitter&color=0bf&logoColor=fff" alt="Twitter" />
   </a>
   <a href="https://news.ycombinator.com/item?id=32939407"><img src="https://img.shields.io/badge/Hacker%20News-255-%23FF6600" alt="Hacker News"></a>
-  <a href="https://github.com/steven-tey/dub/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/steven-tey/dub?label=license&logo=github&color=f80&logoColor=fff" alt="License" />
+  <a href="https://github.com/juancamiloqhz/dub/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/juancamiloqhz/dub?label=license&logo=github&color=f80&logoColor=fff" alt="License" />
   </a>
 </p>
 
@@ -28,19 +28,19 @@
 
 ## Introduction
 
-Dub is an open-source link management tool for modern marketing teams to create, share, and track short links. Built with [Vercel Edge Functions](http://vercel.com/edge), [Upstash Redis](https://docs.upstash.com/redis), and [Planetscale MySQL](https://planetscale.com/).
+CoreWave is an open-source link management tool for modern marketing teams to create, share, and track short links. Built with [Vercel Edge Functions](http://vercel.com/edge), [Upstash Redis](https://docs.upstash.com/redis), and [Planetscale MySQL](https://planetscale.com/).
 
-Here are some of the features that Dub provides out-of-the-box:
+Here are some of the features that CoreWave provides out-of-the-box:
 
 ### Built-in Analytics
 
-Dub provides a powerful analytics dashboard for your links, including geolocation, device, and browser information.
+CoreWave provides a powerful analytics dashboard for your links, including geolocation, device, and browser information.
 
 ![Analytics Dashboard](https://user-images.githubusercontent.com/28986134/200727883-40fe9e62-93a2-48b6-8316-4ce3e6f490f0.png)
 
 ### Custom domains
 
-You can easily configure custom domains on Dub – just add an A/CNAME record to your DNS provider and you're good to go. This is built on the [Vercel Domains API](https://domains-api.vercel.app/).
+You can easily configure custom domains on CoreWave – just add an A/CNAME record to your DNS provider and you're good to go. This is built on the [Vercel Domains API](https://domains-api.vercel.app/).
 
 ![Custom Domains](https://user-images.githubusercontent.com/28986134/200727913-432734b4-4fc7-46ef-b09f-cc8262dc8a0d.png)
 
@@ -60,9 +60,9 @@ Add a custom OG image in front of your target URL. Bots like Twitter/Facebook wi
 
 > Note: one-click deployment is a bit broken at the moment – you'll need to change some of the hard-coded values in the codebase to get it working. We're working on fixing this.
 
-You can deploy your own hosted version of Dub for greater privacy & control. Just click the link below to deploy a ready-to-go version of Dub to Vercel.
+You can deploy your own hosted version of CoreWave for greater privacy & control. Just click the link below to deploy a ready-to-go version of CoreWave to Vercel.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://dub.sh/deploy)
+[![Deploy with Vercel](https://vercel.com/button)](https://corewave.xyz/deploy)
 
 ## Tech Stack
 
@@ -78,7 +78,7 @@ You can deploy your own hosted version of Dub for greater privacy & control. Jus
 
 ## Implementation
 
-Dub is built as a standard Next.js application with [Middleware](https://nextjs.org/docs/advanced-features/middleware) to handle multi-tenancy, inspired by [the Vercel Platforms Starter Kit](https://github.com/vercel/platforms).
+CoreWave is built as a standard Next.js application with [Middleware](https://nextjs.org/docs/advanced-features/middleware) to handle multi-tenancy, inspired by [the Vercel Platforms Starter Kit](https://github.com/vercel/platforms).
 
 [Redis](https://redis.io/) is used as the caching layer for all short links.
 
@@ -90,17 +90,17 @@ Dub is built as a standard Next.js application with [Middleware](https://nextjs.
 
 We love our contributors! Here's how you can contribute:
 
-- [Open an issue](https://github.com/steven-tey/dub/issues) if you believe you've encountered a bug.
-- Make a [pull request](https://github.com/steven-tey/dub/pull) to add new features/make quality-of-life improvements/fix bugs.
+- [Open an issue](https://github.com/juancamiloqhz/dub/issues) if you believe you've encountered a bug.
+- Make a [pull request](https://github.com/juancamiloqhz/dub/pull) to add new features/make quality-of-life improvements/fix bugs.
 
-<a href="https://github.com/steven-tey/dub/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=steven-tey/dub" />
+<a href="https://github.com/juancamiloqhz/dub/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=juancamiloqhz/dub" />
 </a>
 
 ## Author
 
-- Steven Tey ([@steventey](https://twitter.com/steventey))
+- Juan ([@juancamiloqhz](https://twitter.com/juancamiloqhz))
 
 ## License
 
-Inspired by [Plausible](https://plausible.io/), Dub is open-source under the GNU Affero General Public License Version 3 (AGPLv3) or any later version. You can [find it here](https://github.com/steven-tey/dub/blob/main/LICENSE.md).
+Inspired by [Plausible](https://plausible.io/), CoreWave is open-source under the GNU Affero General Public License Version 3 (AGPLv3) or any later version. You can [find it here](https://github.com/juancamiloqhz/dub/blob/main/LICENSE.md).

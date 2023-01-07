@@ -21,8 +21,8 @@ export default function Placeholder({ domain }: { domain: string }) {
   return (
     <div className="flex h-screen flex-col items-center">
       <Meta
-        title={`${domain.toUpperCase()} - A Dub Custom Domain`}
-        description={`${domain.toUpperCase()} is a custom domain on Dub - an open-source link management tool for modern marketing teams to create, share, and track short links.`}
+        title={`${domain.toUpperCase()} - A CoreWave Custom Domain`}
+        description={`${domain.toUpperCase()} is a custom domain on CoreWave - an open-source link management tool for modern marketing teams to create, share, and track short links.`}
       />
       <Background />
       <motion.div
@@ -58,7 +58,7 @@ export default function Placeholder({ domain }: { domain: string }) {
               className="font-display text-4xl font-bold text-gray-800 transition-colors sm:text-5xl"
               variants={STAGGER_CHILD_VARIANTS}
             >
-              Welcome to Dub
+              Welcome to CoreWave
             </motion.h1>
             <motion.p
               className="max-w-xl text-gray-600 transition-colors sm:text-lg"
@@ -67,16 +67,16 @@ export default function Placeholder({ domain }: { domain: string }) {
               <InlineSnippet>{domain}</InlineSnippet> is a custom domain on{" "}
               <a
                 className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text font-semibold text-transparent decoration-rose-600 hover:underline"
-                href={`https://dub.sh?utm_source=${domain}&utm_medium=referral&utm_campaign=custom-domain`}
+                href={`https://corewave.xyz?utm_source=${domain}&utm_medium=referral&utm_campaign=custom-domain`}
               >
-                Dub
+                CoreWave
               </a>{" "}
               - a link management tool for modern marketing teams to create,
               share, and track short links.
             </motion.p>
             <motion.a
               variants={STAGGER_CHILD_VARIANTS}
-              href={`https://dub.sh?utm_source=${domain}&utm_medium=referral&utm_campaign=custom-domain`}
+              href={`https://corewave.xyz?utm_source=${domain}&utm_medium=referral&utm_campaign=custom-domain`}
               className="rounded-full bg-gray-800 px-10 py-2 font-medium text-white transition-colors hover:bg-black"
             >
               Create Your Free Branded Link

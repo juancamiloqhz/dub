@@ -208,7 +208,7 @@ function AdvancedSettings({ qrData, setFgColor, setShowLogo }) {
               <Tooltip
                 content={
                   <TooltipContent
-                    title="As a freemium product, we rely on word of mouth to spread the word about Dub. If you'd like to remove the Dub logo/upload your own, please consider upgrading to a Pro plan."
+                    title="As a freemium product, we rely on word of mouth to spread the word about CoreWave. If you'd like to remove the CoreWave logo/upload your own, please consider upgrading to a Pro plan."
                     cta="Upgrade to Pro"
                     ctaLink={isApp ? "/settings" : "/#pricing"}
                   />
@@ -222,7 +222,7 @@ function AdvancedSettings({ qrData, setFgColor, setShowLogo }) {
                     thumbTranslate="translate-x-6"
                     disabled={true}
                   />
-                  <p className="text-sm text-gray-600">Show Dub.sh Logo</p>
+                  <p className="text-sm text-gray-600">Show CoreWave Logo</p>
                 </div>
               </Tooltip>
             ) : (
@@ -233,7 +233,7 @@ function AdvancedSettings({ qrData, setFgColor, setShowLogo }) {
                   thumbDimensions="w-5 h-5"
                   thumbTranslate="translate-x-6"
                 />
-                <p className="text-sm text-gray-600">Show Dub.sh Logo</p>
+                <p className="text-sm text-gray-600">Show CoreWave Logo</p>
               </div>
             )}
           </div>
@@ -295,7 +295,7 @@ function QrDropdown({ download, qrData, showLogo, logo }) {
                     ...(showLogo && {
                       imageSettings: {
                         ...qrData.imageSettings,
-                        src: logo || "https://dub.sh/_static/logo.svg",
+                        src: logo || "https://corewave.xyz/_static/logo.svg",
                       },
                     }),
                   }),

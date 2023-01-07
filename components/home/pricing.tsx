@@ -37,7 +37,7 @@ const pricingItems = [
       { text: "SSO/SAML", negative: true },
     ],
     cta: "Start for free",
-    ctaLink: "https://app.dub.sh/register",
+    ctaLink: "https://app.corewave.xyz/register",
   },
   {
     plan: "Pro",
@@ -60,7 +60,7 @@ const pricingItems = [
       { text: "SSO/SAML", negative: true },
     ],
     cta: "Get started",
-    ctaLink: "https://app.dub.sh/register",
+    ctaLink: "https://app.corewave.xyz/register",
   },
   {
     plan: "Enterprise",
@@ -84,7 +84,8 @@ const pricingItems = [
       { text: "SSO/SAML" },
     ],
     cta: "Contact us",
-    ctaLink: "mailto:steven@dub.sh?subject=Interested%20in%20Dub%20Enterprise",
+    ctaLink:
+      "mailto:info@corewave.xyz?subject=Interested%20in%20CoreWave%20Enterprise",
   },
 ];
 

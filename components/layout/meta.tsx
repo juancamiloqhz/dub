@@ -2,9 +2,9 @@ import Head from "next/head";
 import { FAVICON_FOLDER } from "@/lib/constants";
 
 export default function Meta({
-  title = "Dub - Link Management for Modern Marketing Teams",
-  description = "Dub is an open-source link management tool for modern marketing teams to create, share, and track short links.",
-  image = "https://dub.sh/_static/thumbnail.png",
+  title = "CoreWave - Link Management for Modern Marketing Teams",
+  description = "CoreWave is an open-source link management tool for modern marketing teams to create, share, and track short links.",
+  image = "https://corewave.xyz/_static/thumbnail.png",
 }: {
   title?: string;
   description?: string;
@@ -43,17 +43,20 @@ export default function Meta({
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta itemProp="image" content={image} />
-      <meta property="og:logo" content="https://dub.sh/_static/logo.png"></meta>
+      <meta
+        property="og:logo"
+        content="https://corewave.xyz/_static/logo.png"
+      ></meta>
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@dubdotsh" />
-      <meta name="twitter:creator" content="@steventey" />
+      <meta name="twitter:site" content="@corewave" />
+      <meta name="twitter:creator" content="@juancamiloqhz" />
       <meta
         name="twitter:title"
-        content="Dub - Open-Source Bitly Alternative"
+        content="CoreWave - Open-Source Bitly Alternative"
       />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />

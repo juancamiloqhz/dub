@@ -19,7 +19,7 @@ export default function FeatureUpdates(): JSX.Element {
       <Head />
       <MjmlBody width={500}>
         <MjmlWrapper cssClass="container">
-          <Header title="New Features from Dub" />
+          <Header title="New Features from CoreWave" />
           <MjmlSection padding="0">
             <MjmlColumn>
               <MjmlImage
@@ -35,18 +35,18 @@ export default function FeatureUpdates(): JSX.Element {
               <MjmlText cssClass="paragraph">
                 Happy Wednesday! Here are some of the{" "}
                 <a
-                  href="https://twitter.com/steventey/status/1587828901174284288"
+                  href="https://twitter.com/juancamiloqhz/status/1587828901174284288"
                   target="_blank"
                 >
                   new features
                 </a>{" "}
-                that were recently added to Dub:
+                that were recently added to CoreWave:
               </MjmlText>
               <Divider bottomPadding />
               <MjmlText cssClass="subtitle">1. Links with superpowers</MjmlText>
 
               <MjmlText cssClass="paragraph">
-                With Dub, you can create links with:
+                With CoreWave, you can create links with:
               </MjmlText>
               <MjmlText cssClass="li">
                 •&nbsp;&nbsp;Custom social previews (OG tags)
@@ -58,7 +58,7 @@ export default function FeatureUpdates(): JSX.Element {
               <MjmlText cssClass="li">•&nbsp;&nbsp;Expiration dates</MjmlText>
               <MjmlText cssClass="paragraph">
                 See{" "}
-                <a href="https://dub.sh#features" target="_blank">
+                <a href="https://corewave.xyz#features" target="_blank">
                   how this works
                 </a>
                 .
@@ -73,11 +73,11 @@ export default function FeatureUpdates(): JSX.Element {
                 you to use your own domain for your short links.
               </MjmlText>
               <MjmlText cssClass="paragraph">
-                With Dub, you can do that for $0/mo.
+                With CoreWave, you can do that for $0/mo.
               </MjmlText>
               <MjmlText cssClass="paragraph">
                 Start{" "}
-                <a href="https://app.dub.sh" target="_blank">
+                <a href="https://app.corewave.xyz" target="_blank">
                   shortening your links
                 </a>{" "}
                 with your own domain.
@@ -86,7 +86,7 @@ export default function FeatureUpdates(): JSX.Element {
               <Divider bottomPadding />
               <MjmlText cssClass="subtitle">3. Analytics that matter</MjmlText>
               <MjmlText cssClass="paragraph">
-                Dub provides powerful analytics for your links:
+                CoreWave provides powerful analytics for your links:
               </MjmlText>
               <MjmlText cssClass="li">
                 •&nbsp;&nbsp;Geolocation (country, city)
@@ -99,7 +99,7 @@ export default function FeatureUpdates(): JSX.Element {
               </MjmlText>
               <MjmlText cssClass="paragraph">
                 Check out a live demo{" "}
-                <a href="https://dub.sh/stats/github" target="_blank">
+                <a href="https://corewave.xyz/stats/github" target="_blank">
                   here
                 </a>
                 .
@@ -108,7 +108,7 @@ export default function FeatureUpdates(): JSX.Element {
               <Divider bottomPadding />
               <MjmlText cssClass="subtitle">4. Free QR code generator</MjmlText>
               <MjmlText cssClass="paragraph">
-                Dub allows you to generate QR codes of your short links for
+                CoreWave allows you to generate QR codes of your short links for
                 free.
               </MjmlText>
               <MjmlText cssClass="paragraph">
@@ -127,11 +127,11 @@ export default function FeatureUpdates(): JSX.Element {
 
               <MjmlText cssClass="paragraph">
                 We recently added a new "team invites" feature that allows you
-                to invite your friends & teammates to your Dub project.
+                to invite your friends & teammates to your CoreWave project.
               </MjmlText>
               <MjmlText cssClass="paragraph">
-                With Dub, you get unlimited team invites for every project – no
-                more sharing logins via Google groups.
+                With CoreWave, you get unlimited team invites for every project
+                – no more sharing logins via Google groups.
               </MjmlText>
 
               <Divider bottomPadding />
@@ -139,7 +139,7 @@ export default function FeatureUpdates(): JSX.Element {
                 In case you missed it, we also revamped our pricing model and
                 made it more affordable for everyone. You can read more about it{" "}
                 <a
-                  href="https://twitter.com/dubdotsh/status/1579466952594292737"
+                  href="https://twitter.com/corewave/status/1579466952594292737"
                   target="_blank"
                 >
                   here
@@ -147,7 +147,7 @@ export default function FeatureUpdates(): JSX.Element {
                 .
               </MjmlText>
               <MjmlText cssClass="paragraph" color={grayDark}>
-                Steven from Dub
+                Juan from CoreWave
               </MjmlText>
               <Divider />
             </MjmlColumn>

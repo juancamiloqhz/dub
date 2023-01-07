@@ -19,7 +19,8 @@ export default function Testimonials({
           </span>
         </h2>
         <p className="mt-5 text-gray-600 sm:text-lg">
-          Don't take it from us - here's what our users have to say about Dub.
+          Don't take it from us - here's what our users have to say about
+          CoreWave.
         </p>
       </div>
       <div className="space-y-6 py-8 sm:columns-2 sm:gap-6 xl:columns-3">

@@ -40,12 +40,12 @@ export async function getServerSideProps({
   req: NextApiRequest;
   res: NextApiResponse;
 }) {
-  const hostname = `https://dub.sh`;
+  const hostname = `https://corewave.xyz`;
 
   // Get top 100 links (sorted by clicks in descending order)
   const links = await prisma.link.findMany({
     where: {
-      domain: "dub.sh",
+      domain: "corewave.xyz",
     },
     select: {
       key: true,

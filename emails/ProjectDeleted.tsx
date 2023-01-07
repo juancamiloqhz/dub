@@ -42,27 +42,30 @@ export default function ProjectDeleted({
                     {domain}
                   </a>
                 </code>{" "}
-                for your Dub project{" "}
-                <a href={`https://app.dub.sh/${projectSlug}`} target="_blank">
+                for your CoreWave project{" "}
+                <a
+                  href={`https://app.corewave.xyz/${projectSlug}`}
+                  target="_blank"
+                >
                   {projectSlug}↗
                 </a>{" "}
                 has been invalid for 30 days. As a result, your project has been
-                deleted from Dub.
+                deleted from CoreWave.
               </MjmlText>
               <MjmlText cssClass="paragraph">
                 If you would like to restore the project, you can easily create
-                it again on Dub with the link below.
+                it again on CoreWave with the link below.
               </MjmlText>
               <ButtonPrimary
-                link={`https://app.dub.sh/`}
+                link={`https://app.corewave.xyz/`}
                 uiText="Create a new project"
               />
               <MjmlText cssClass="paragraph">
-                If you did not want to keep this project on Dub anyway, you can
-                simply ignore this email.
+                If you did not want to keep this project on CoreWave anyway, you
+                can simply ignore this email.
               </MjmlText>
               <MjmlText cssClass="paragraph" color={grayDark}>
-                Steven from Dub
+                Juan from CoreWave
               </MjmlText>
               <Divider />
             </MjmlColumn>

@@ -15,11 +15,13 @@ export default function StatsPage({
   return (
     <HomeLayout
       meta={{
-        title: `Stats for dub.sh/${_key} (${nFormatter(clicks)} clicks) - Dub`,
-        description: `Stats page for dub.sh/${_key}, which redirects to ${url} and has received ${nFormatter(
+        title: `Stats for corewave.xyz/${_key} (${nFormatter(
+          clicks,
+        )} clicks) - CoreWave`,
+        description: `Stats page for corewave.xyz/${_key}, which redirects to ${url} and has received ${nFormatter(
           clicks,
         )} total clicks.`,
-        image: `https://dub.sh/api/og/stats?key=${_key}&clicks=${clicks}`,
+        image: `https://corewave.xyz/api/og/stats?key=${_key}&clicks=${clicks}`,
       }}
     >
       <div className="bg-gray-50">
@@ -32,7 +34,7 @@ export default function StatsPage({
 export const getStaticPaths = async () => {
   const links = await prisma.link.findMany({
     where: {
-      domain: "dub.sh",
+      domain: "corewave.xyz",
     },
     select: {
       key: true,
@@ -58,7 +60,7 @@ export const getStaticProps = async (context) => {
   const props = await prisma.link.findUnique({
     where: {
       domain_key: {
-        domain: "dub.sh",
+        domain: "corewave.xyz",
         key,
       },
     },

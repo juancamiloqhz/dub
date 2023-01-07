@@ -18,5 +18,5 @@ export function ProjectInvite() {
 }
 
 export function WelcomeEmail() {
-  return <WelcomeEmailChild name="Steven Tey" />;
+  return <WelcomeEmailChild name="Juan" />;
 }

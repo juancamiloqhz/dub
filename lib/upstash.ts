@@ -15,14 +15,14 @@ export const ratelimit = new Ratelimit({
   limiter: Ratelimit.slidingWindow(10, "10 s"),
 });
 
-// only for dub.sh public demo
+// only for corewave.xyz public demo
 export async function setRandomKey(
   url: string,
 ): Promise<{ response: string; key: string }> {
   /* recursively set link till successful */
   const key = nanoid();
   const response = await redis.set(
-    `dub.sh:${key}`,
+    `corewave.xyz:${key}`,
     {
       url,
     },
@@ -44,7 +44,7 @@ export async function setRandomKey(
  * If there's an error, it will be logged to a separate redis list for debugging
  **/
 export async function recordMetatags(url: string, error: boolean) {
-  if (url === "https://github.com/steven-tey/dub") {
+  if (url === "https://github.com/juancamiloqhz/dub") {
     // don't log metatag generation for default URL
     return null;
   } else {

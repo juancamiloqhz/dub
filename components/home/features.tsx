@@ -21,7 +21,7 @@ const featureList = [
     title: "Analytics that matter",
     icon: <Chart className="h-5 w-5 text-gray-600" />,
     description:
-      "Dub provides powerful analytics for your links, including geolocation, device, browser, and referrer information.",
+      "CoreWave provides powerful analytics for your links, including geolocation, device, browser, and referrer information.",
     cta: (
       <Link
         href={{ pathname: "/", query: { key: "github" } }}
@@ -41,10 +41,10 @@ const featureList = [
     title: "Use your own domain",
     icon: <Airplay className="h-5 w-5 text-gray-600" />,
     description:
-      "Dub offers free custom domains on all plans - start personalizing your links today.",
+      "CoreWave offers free custom domains on all plans - start personalizing your links today.",
     cta: (
       <a
-        href="https://app.dub.sh"
+        href="https://app.corewave.xyz"
         target="_blank"
         rel="noreferrer"
         className="block max-w-fit rounded-full border border-black bg-black px-4 py-1.5 text-sm text-white transition-all hover:bg-white hover:text-black"
@@ -77,7 +77,7 @@ const featureList = [
     title: "Free QR code generator",
     icon: <QR className="h-5 w-5 text-gray-600" />,
     description:
-      "QR codes and short links are like peas in a pod. That's why we've built a QR code generator right into Dub.",
+      "QR codes and short links are like peas in a pod. That's why we've built a QR code generator right into CoreWave.",
     cta: "View demo", //custom cta
     demo: "https://d2vwwcvoksz7ty.cloudfront.net/qr.mp4",
   },
@@ -86,10 +86,10 @@ const featureList = [
     title: "Collaborate with your team",
     icon: <Users className="h-5 w-5 text-gray-600" />,
     description:
-      "With Dub, you can invite unlimited team members to collaborate on your project for free - no more sharing logins via Google groups.",
+      "With CoreWave, you can invite unlimited team members to collaborate on your project for free - no more sharing logins via Google groups.",
     cta: (
       <a
-        href="https://app.dub.sh"
+        href="https://app.corewave.xyz"
         target="_blank"
         rel="noreferrer"
         className="block max-w-fit rounded-full border border-black bg-black px-4 py-1.5 text-sm text-white transition-all hover:bg-white hover:text-black"
@@ -111,7 +111,7 @@ export default function Features() {
   const { setShowLinkQRModal, LinkQRModal } = useLinkQRModal({
     props: {
       key: "github",
-      url: "https://github.com/steven-tey/dub",
+      url: "https://github.com/juancamiloqhz/dub",
     },
   });
   return (
@@ -135,7 +135,7 @@ export default function Features() {
             marketing teams
           </h2>
           <p className="mt-5 text-gray-600 sm:text-lg">
-            Dub is more than just a link shortener. We've built a suite of
+            CoreWave is more than just a link shortener. We've built a suite of
             powerful features that gives you marketing superpowers.
           </p>
         </div>

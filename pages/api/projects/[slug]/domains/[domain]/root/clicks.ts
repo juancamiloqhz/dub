@@ -4,7 +4,7 @@ import { getStats } from "@/lib/stats";
 
 export default withProjectAuth(
   async (req: NextApiRequest, res: NextApiResponse) => {
-    // GET /api/projects/[slug]/domains/[domain]/root/clicks - get # of clicks on root of domain (e.g. dub.sh, vercel.fyi)
+    // GET /api/projects/[slug]/domains/[domain]/root/clicks - get # of clicks on root of domain (e.g. corewave.xyz, vercel.fyi)
     if (req.method === "GET") {
       const { domain } = req.query as {
         domain: string;

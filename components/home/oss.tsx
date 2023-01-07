@@ -17,7 +17,7 @@ export default function OSS({ stars }: { stars: number }) {
       </div>
       <div className="flex items-center justify-center py-10">
         <a
-          href="https://github.com/steven-tey/dub"
+          href="https://github.com/juancamiloqhz/dub"
           target="_blank"
           rel="noreferrer"
         >

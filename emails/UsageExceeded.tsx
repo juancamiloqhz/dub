@@ -48,7 +48,7 @@ export default function UsageExceeded({
                 their stats, edit them, or add more links.
               </MjmlText>
               <ButtonPrimary
-                link={`https://app.dub.sh/settings`}
+                link={`https://app.corewave.xyz/settings`}
                 uiText="Upgrade my plan"
               />
               <MjmlText cssClass="paragraph">
@@ -60,7 +60,7 @@ export default function UsageExceeded({
                 or reply to let me know if you have any questions!
               </MjmlText>
               <MjmlText cssClass="paragraph" color={grayDark}>
-                Steven from Dub
+                Juan from CoreWave
               </MjmlText>
               <Divider />
             </MjmlColumn>

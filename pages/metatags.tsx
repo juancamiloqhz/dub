@@ -17,7 +17,7 @@ import { fetcher, getDomainWithoutWWW, getUrlFromString } from "@/lib/utils";
 import useSWR from "swr";
 
 export default function Metatags({ tweets }: { tweets: any }) {
-  const [url, setUrl] = useState("https://github.com/steven-tey/dub");
+  const [url, setUrl] = useState("https://github.com/juancamiloqhz/dub");
   const [debouncedUrl] = useDebounce(getUrlFromString(url), 500);
   const hostname = useMemo(() => {
     return getDomainWithoutWWW(debouncedUrl);
@@ -40,13 +40,13 @@ export default function Metatags({ tweets }: { tweets: any }) {
       meta={{
         title: "Metatags API - The Free API to Get Meta Tags from a URL",
         description:
-          "Dub's Metatags API is a free & simple API to retrieve meta & OG tags from a URL, powered by Vercel Edge Functions.",
+          "CoreWave's Metatags API is a free & simple API to retrieve meta & OG tags from a URL, powered by Vercel Edge Functions.",
       }}
     >
       <Background />
       <div className="z-10 mx-2 my-10 flex max-w-md flex-col space-y-5 px-2.5 text-center sm:mx-auto sm:max-w-lg sm:px-0 lg:mb-28">
         <a
-          href="https://twitter.com/dubdotsh/status/1595459224498233347"
+          href="https://twitter.com/corewave/status/1595459224498233347"
           target="_blank"
           rel="noreferrer"
           className="mx-auto flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full bg-blue-100 px-7 py-2 transition-all hover:bg-blue-200"
@@ -131,7 +131,7 @@ export default function Metatags({ tweets }: { tweets: any }) {
           className="hover:bg/black-[0.08] group relative flex cursor-copy items-center space-x-5 rounded-full bg-black/5 py-2.5 pr-3 pl-5 transition-all"
           onClick={() => {
             navigator.clipboard.writeText(
-              `https://api.dub.sh/metatags?url=${getUrlFromString(url)}`,
+              `https://api.corewave.xyz/metatags?url=${getUrlFromString(url)}`,
             );
             setCopied(true);
             setTimeout(() => {
@@ -141,7 +141,7 @@ export default function Metatags({ tweets }: { tweets: any }) {
         >
           <div className="w-11/12 overflow-scroll scrollbar-hide">
             <p className="whitespace-nowrap text-sm font-medium text-gray-600">
-              https://api.dub.sh/metatags?url=
+              https://api.corewave.xyz/metatags?url=
               <span className="text-amber-600">{getUrlFromString(url)}</span>
             </p>
           </div>
@@ -169,7 +169,7 @@ export default function Metatags({ tweets }: { tweets: any }) {
         </pre>
 
         <a
-          href="https://dub.sh/metatags-code"
+          href="https://corewave.xyz/metatags-code"
           target="_blank"
           rel="noreferrer"
           className="mx-auto mt-2 flex items-center justify-center space-x-2 text-sm text-gray-500 transition-all hover:text-black"
@@ -193,11 +193,11 @@ export default function Metatags({ tweets }: { tweets: any }) {
 }
 
 export async function getStaticProps() {
-  const tweets = await getTweetsMetadata(["1595465648938930180"]);
+  // const tweets = await getTweetsMetadata(["1595465648938930180"]);
 
   return {
     props: {
-      tweets,
+      tweets: [],
     },
     revalidate: 10,
   };

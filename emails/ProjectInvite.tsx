@@ -25,16 +25,16 @@ export default function ProjectInvite({
       <Head />
       <MjmlBody width={500}>
         <MjmlWrapper cssClass="container">
-          <Header title="Your Dub Invite" />
+          <Header title="Your CoreWave Invite" />
           <MjmlSection cssClass="smooth">
             <MjmlColumn>
               <MjmlText cssClass="paragraph">
                 You've been invited to join the <strong>{projectName}</strong>{" "}
-                project on Dub!
+                project on CoreWave!
               </MjmlText>
               <MjmlText cssClass="paragraph">
-                You can use the magic link below to sign in to Dub and join the
-                project.
+                You can use the magic link below to sign in to CoreWave and join
+                the project.
               </MjmlText>
               <ButtonPrimary link={url} uiText="Join Project" />
               <MjmlText cssClass="paragraph">

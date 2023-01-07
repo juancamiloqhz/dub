@@ -13,11 +13,15 @@ export const authOptions: NextAuthOptions = {
   providers: [
     EmailProvider({
       sendVerificationRequest({ identifier, url }) {
-        sendMail({
-          subject: "Your Dub.sh Login Link",
-          to: identifier,
-          component: <LoginLink url={url} />,
-        });
+        try {
+          sendMail({
+            subject: "Your CoreWave Login Link",
+            to: identifier,
+            component: <LoginLink url={url} />,
+          });
+        } catch (e) {
+          console.log("ERRORORORORO: ", e);
+        }
       },
     }),
   ],
@@ -31,7 +35,7 @@ export const authOptions: NextAuthOptions = {
         sameSite: "lax",
         path: "/",
         // When working on localhost, the cookie domain must be omitted entirely (https://stackoverflow.com/a/1188145)
-        domain: VERCEL_DEPLOYMENT ? ".dub.sh" : undefined,
+        domain: VERCEL_DEPLOYMENT ? ".corewave.xyz" : undefined,
         secure: VERCEL_DEPLOYMENT,
       },
     },
@@ -69,7 +73,7 @@ export const authOptions: NextAuthOptions = {
         const email = message.user.email;
         await Promise.all([
           sendMarketingMail({
-            subject: "✨ Welcome to Dub",
+            subject: "✨ Welcome to CoreWave! ✨",
             to: email,
             component: <WelcomeEmail />,
           }),

@@ -67,7 +67,7 @@ export function capitalize(str: string) {
 
 export function linkConstructor({
   key,
-  domain = "dub.sh",
+  domain = "corewave.xyz",
   localhost,
   pretty,
   noDomain,
@@ -179,7 +179,7 @@ export const getApexDomain = (url: string) => {
     // otherwise, it's a subdomain (e.g. dub.vercel.app), so we return the last 2 parts
     return parts.slice(-2).join(".");
   }
-  // if it's a normal domain (e.g. dub.sh), we return the domain
+  // if it's a normal domain (e.g. corewave.xyz), we return the domain
   return domain;
 };
 
@@ -312,7 +312,7 @@ export const log = async (message: string, type: "cron" | "links") => {
       }),
     });
   } catch (e) {
-    console.log(`Failed to log to Dub Slack. Error: ${e}`);
+    console.log(`Failed to log to CoreWave Slack. Error: ${e}`);
   }
 };
 
