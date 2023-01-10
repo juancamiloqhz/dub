@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { parse } from "@/lib/middleware/utils";
 
 export default async function ApiMiddleware(req: NextRequest) {
+  console.log("api middleware")
   const { path } = parse(req);
   if (path.startsWith("/metatags")) {
     const url = req.nextUrl.searchParams.get("url");

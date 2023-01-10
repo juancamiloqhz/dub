@@ -285,8 +285,8 @@ export const getUrlWithoutUTMParams = (url: string) => {
 };
 
 const logTypeToEnv = {
-  cron: process.env.DUB_SLACK_HOOK_CRON,
-  links: process.env.DUB_SLACK_HOOK_LINKS,
+  cron: process.env.COREWAVE_SLACK_HOOK_CRON,
+  links: process.env.COREWAVE_SLACK_HOOK_LINKS,
 };
 
 export const log = async (message: string, type: "cron" | "links") => {
@@ -317,7 +317,7 @@ export const log = async (message: string, type: "cron" | "links") => {
 };
 
 export const edgeConfig = createClient(
-  `https://edge-config.vercel.com/ecfg_eh6zdvznm70adch6q0mqxshrt4ny?token=64aef40c-ea06-4aeb-b528-b94d924ec05a`,
+  `https://edge-config.vercel.com/ecfg_kuqj6hfmh3ud4vqpr5aovoanzw9u?token=cb94fafd-d8ca-44b9-a457-a37cab5c2f09`,
 );
 
 export const getBlackListedDomains = async () => {

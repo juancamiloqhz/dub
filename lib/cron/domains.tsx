@@ -15,6 +15,7 @@ export const handleDomainUpdates = async (
   changed: boolean,
   sentEmails: string[],
 ) => {
+  await log(`Domains cron executed at ${new Date()}`, "cron");
   if (changed) {
     await log(`Domain *${domain}* changed status to *${verified}*`, "cron");
   }

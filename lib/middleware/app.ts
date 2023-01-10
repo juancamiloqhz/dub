@@ -3,6 +3,7 @@ import { getToken } from "next-auth/jwt";
 import { parse } from "@/lib/middleware/utils";
 
 export default async function AppMiddleware(req: NextRequest) {
+  console.log("app middleware")
   const { path } = parse(req);
   const session = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
   if (!session?.email && path !== "/login" && path !== "/register") {

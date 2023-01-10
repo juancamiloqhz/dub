@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { ReactNode } from "react";
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import { Github, Logo, Twitter } from "@/components/shared/icons";
 import Meta from "../meta";
 import { motion, AnimatePresence } from "framer-motion";
@@ -39,7 +39,16 @@ export default function HomeLayout({
                 />
               </Link>
             </div>
-
+            {session && status !== "loading" && (
+              <button
+                type="button"
+                onClick={() => {
+                  signOut();
+                }}
+              >
+                logout
+              </button>
+            )}
             <AnimatePresence>
               {!session && status !== "loading" ? (
                 <motion.a
@@ -58,7 +67,7 @@ export default function HomeLayout({
                   {...FADE_IN_ANIMATION_SETTINGS}
                   href={
                     process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
-                      ? "https://app.corewave.xyz/login"
+                      ? "https://app.corewave.xyz"
                       : "http://app.localhost:3000"
                   }
                   className="rounded-full border border-black bg-black py-1.5 px-5 text-sm text-white transition-all hover:bg-white hover:text-black"

@@ -12,6 +12,7 @@ export default async function LinkMiddleware(
   req: NextRequest,
   ev: NextFetchEvent,
 ) {
+  console.log("link middleware")
   const url = req.nextUrl.clone();
   const { domain, key } = parse(req);
 

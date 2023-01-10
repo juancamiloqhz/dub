@@ -9,6 +9,7 @@ export default async function RootMiddleware(
   req: NextRequest,
   ev: NextFetchEvent,
 ) {
+  console.log("root middleware")
   const { domain } = parse(req);
 
   if (!domain) {
