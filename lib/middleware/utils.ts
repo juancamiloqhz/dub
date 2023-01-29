@@ -6,6 +6,7 @@ export const parse = (req: NextRequest) => {
   if (HOME_HOSTNAMES.has(domain)) domain = "corewave.xyz";
   const path = req.nextUrl.pathname;
   const key = decodeURIComponent(path.split("/")[1]); // to handle foreign languages like Hebrew
+  // console.log("parse", { domain, path, key })
   return { domain, path, key };
 };
 

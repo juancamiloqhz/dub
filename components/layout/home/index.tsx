@@ -29,26 +29,18 @@ export default function HomeLayout({
         <div className="mx-auto max-w-screen-xl px-5 md:px-20">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center">
-              <Link href="/">
+              <Link href="/" className="flex items-center gap-1">
                 <Image
-                  src="/_static/logotype.svg"
+                  // src="/_static/logotype.svg"
+                  src="/_static/corewavelogo.svg"
                   alt="CoreWave logo"
                   width={834}
                   height={236}
-                  className="w-24"
+                  className="w-10"
                 />
+                <h2 className="font-bold text-2xl">CoreWave</h2>
               </Link>
             </div>
-            {session && status !== "loading" && (
-              <button
-                type="button"
-                onClick={() => {
-                  signOut();
-                }}
-              >
-                logout
-              </button>
-            )}
             <AnimatePresence>
               {!session && status !== "loading" ? (
                 <motion.a

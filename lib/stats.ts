@@ -139,6 +139,7 @@ export const getStats = async ({
     );
     url.searchParams.append("granularity", intervalData[interval].granularity);
   }
+  // console.log({ url: url.toString() });
 
   return await fetch(url, {
     headers: {
@@ -147,6 +148,7 @@ export const getStats = async ({
   })
     .then((res) => res.json())
     .then(({ data }) => {
+      // console.log({ data });
       return data;
     });
 };

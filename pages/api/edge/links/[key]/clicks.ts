@@ -31,10 +31,12 @@ export default async function handler(req: NextRequest) {
       endpoint: "clicks",
       interval,
     });
+    // console.dir({ response }, { depth: null });
 
     let clicks = 0;
     try {
       clicks = response[0]["count()"];
+      // console.log({ clicks });
     } catch (e) {
       console.log(e);
     }

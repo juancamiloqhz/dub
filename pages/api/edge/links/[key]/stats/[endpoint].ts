@@ -10,7 +10,12 @@ export default async function handler(req: NextRequest) {
     const key = req.nextUrl.searchParams.get("key");
     const interval = req.nextUrl.searchParams.get("interval") || "24h";
     const endpoint = req.nextUrl.searchParams.get("endpoint");
-
+    // console.log({
+    //   domain: "corewave.xyz",
+    //   key,
+    //   endpoint,
+    //   interval,
+    // });
     const response = await getStats({
       domain: "corewave.xyz",
       key,

@@ -41,6 +41,7 @@ export default function Locations() {
       }?interval=${interval || "24h"}`,
     fetcher,
   );
+  // console.log({ data })
 
   return (
     <div className="relative h-[420px] overflow-scroll border border-gray-200 bg-white px-7 py-5 scrollbar-hide  sm:rounded-lg sm:border-gray-100 sm:shadow-lg">

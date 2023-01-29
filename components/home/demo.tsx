@@ -41,16 +41,20 @@ const Demo = () => {
           <Tooltip
             content={
               <TooltipContent
-                title="Maximum number of links reached. Swipe to delete existing links or
-              create a free account."
-                cta="Start For Free"
+              //   title="Maximum number of links reached. Swipe to delete existing links or
+              // create a free account."
+              //   cta="Start For Free"
+                title="Número máximo de enlaces alcanzado. Deslice para eliminar enlaces existentes o
+                cree una cuenta gratuita."
+                cta="Comienza Gratis"
                 ctaLink="https://app.corewave.xyz/register"
               />
             }
           >
             <div className="relative flex w-full items-center">
               <div className="block w-full rounded-md border border-gray-200 bg-white p-2 pl-3 pr-12 text-sm text-gray-400 shadow-lg focus:border-black">
-                Shorten your link
+                {/* Shorten your link */}
+                Acorta tu enlace
               </div>
               <div className="absolute inset-y-0 right-0 my-1.5 mr-1.5 flex w-10 cursor-not-allowed items-center justify-center rounded border border-gray-200 font-sans text-sm font-medium text-gray-400">
                 <p>↵</p>
@@ -62,7 +66,8 @@ const Demo = () => {
             <Link className="absolute inset-y-0 left-0 my-2 ml-3 w-5 text-gray-400" />
             <input
               type="url"
-              placeholder="Shorten your link"
+              // placeholder="Shorten your link"
+              placeholder="Acorta tu enlace"
               value={url}
               onInput={(e) => {
                 setUrl((e.target as HTMLInputElement).value);
@@ -127,16 +132,19 @@ const Demo = () => {
           variants={FRAMER_MOTION_LIST_ITEM_VARIANTS}
           className="rounded-md border border-gray-200 bg-white p-3 text-sm text-gray-500 shadow-lg"
         >
-          Note: Public links will be automatically-deleted after 30 minutes.{" "}
+          {/* Note: Public links will be automatically-deleted after 30 minutes.{" "} */}
+          Nota: los enlaces públicos se eliminarán automáticamente después de 30 minutos.{" "}
           <a
             href="https://app.corewave.xyz/register"
             target="_blank"
             rel="noreferrer"
             className="font-medium text-gray-700 underline transition-all hover:text-black"
           >
-            Create a free account
+            {/* Create a free account */}
+            Crea una cuenta gratuita
           </a>{" "}
-          to keep your links forever.
+          {/* to keep your links forever. */}
+          para mantener tus enlaces para siempre.
         </motion.li>
       </motion.ul>
     </div>

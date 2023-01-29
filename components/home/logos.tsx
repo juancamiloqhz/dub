@@ -5,7 +5,8 @@ export default function Logos() {
   return (
     <div className="mt-20">
       <p className="text-center text-lg text-gray-600">
-        Giving superpowers to marketing teams at world-class companies
+        {/* Giving superpowers to marketing teams at world-class companies */}
+        Dando superpoderes a los equipos de marketing en empresas de clase mundial
       </p>
       <div className="mx-auto mt-8 grid w-full max-w-screen-lg grid-cols-2 items-center gap-5 px-5 sm:grid-cols-4 sm:px-0">
         <BlurImage
