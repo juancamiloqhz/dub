@@ -11,7 +11,7 @@ const sendMail = buildSendMail({
       pass: process.env.SENDGRID_API_KEY,
     },
   }),
-  defaultFrom: "Juan from CoreWave <info@corewave.xyz>",
+  defaultFrom: "Juan de CoreWave <info@corewave.xyz>",
   configPath: "./mailing.config.json",
 });
 
@@ -27,6 +27,6 @@ export const sendMarketingMail = buildSendMail({
       pass: process.env.SENDGRID_MARKETING_API_SECRET,
     },
   }),
-  defaultFrom: "Juan from CoreWave <info@corewave.xyz>",
+  defaultFrom: "Juan de CoreWave <info@corewave.xyz>",
   configPath: "./mailing.config.json",
 });

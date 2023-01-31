@@ -91,7 +91,8 @@ export default withProjectAuth(
         const url = `${process.env.NEXTAUTH_URL}/api/auth/callback/email?${params}`;
 
         sendMail({
-          subject: "You've been invited to join a project on CoreWave",
+          subject: "Has sido invitado a unirte a un proyecto en CoreWave",
+          // subject: "You've been invited to join a project on CoreWave",
           to: email,
           component: <ProjectInvite url={url} projectName={project.name} />,
         });

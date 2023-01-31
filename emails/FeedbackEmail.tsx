@@ -23,12 +23,16 @@ export default function FeedbackEmail({
       <Head />
       <MjmlBody width={500}>
         <MjmlWrapper cssClass="container">
-          <Header title="New Feedback Received" />
+          <Header
+            title="Nuevo Feedback Recibido"
+            // title="New Feedback Received"
+          />
           <MjmlSection cssClass="smooth">
             <MjmlColumn>
               <MjmlText cssClass="paragraph">
-                New feedback from{" "}
-                {email ? <strong>{email}</strong> : "a CoreWave user"}:
+                Nuevo feedback de {/* New feedback from{" "} */}
+                {email ? <strong>{email}</strong> : "un usuario de CoreWave"}:
+                {/* {email ? <strong>{email}</strong> : "a CoreWave user"}: */}
               </MjmlText>
               <MjmlText cssClass="paragraph">{feedback}</MjmlText>
               <Divider />

@@ -25,21 +25,34 @@ export default function ProjectInvite({
       <Head />
       <MjmlBody width={500}>
         <MjmlWrapper cssClass="container">
-          <Header title="Your CoreWave Invite" />
+          <Header
+            title="Tu Invitación a CoreWave"
+            // title="Your CoreWave Invite"
+          />
           <MjmlSection cssClass="smooth">
             <MjmlColumn>
               <MjmlText cssClass="paragraph">
-                You've been invited to join the <strong>{projectName}</strong>{" "}
-                project on CoreWave!
+                ¡Te han invitado a unirte al proyecto{" "}
+                <strong>{projectName}</strong> en CoreWave!
+                {/* You've been invited to join the <strong>{projectName}</strong>{" "}
+                project on CoreWave! */}
               </MjmlText>
               <MjmlText cssClass="paragraph">
-                You can use the magic link below to sign in to CoreWave and join
-                the project.
+                Puedes usar el enlace de abajo para iniciar sesión en CoreWave y
+                unirte al proyecto.
+                {/* You can use the magic link below to sign in to CoreWave and join
+                the project. */}
               </MjmlText>
-              <ButtonPrimary link={url} uiText="Join Project" />
+              <ButtonPrimary
+                link={url}
+                uiText="Unirme al Proyecto"
+                // uiText="Join Project"
+              />
               <MjmlText cssClass="paragraph">
-                If you're on a mobile device, you can also copy the link below
-                and paste it into the browser of your choice.
+                Si estás en un dispositivo móvil, también puedes copiar el
+                enlace de abajo y pegarlo en el navegador de tu elección.
+                {/* If you're on a mobile device, you can also copy the link below
+                and paste it into the browser of your choice. */}
               </MjmlText>
               <MjmlText cssClass="paragraph">
                 <a
@@ -53,7 +66,9 @@ export default function ProjectInvite({
                 </a>
               </MjmlText>
               <MjmlText cssClass="paragraph">
-                If you did not request this email, you can safely ignore it.
+                Si no solicitaste este correo electrónico, puedes ignorarlo con
+                total seguridad.
+                {/* If you did not request this email, you can safely ignore it. */}
               </MjmlText>
               <Divider />
             </MjmlColumn>

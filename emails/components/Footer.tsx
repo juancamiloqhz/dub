@@ -16,15 +16,18 @@ export default function Footer({
             <>
               &nbsp;&nbsp;·&nbsp;&nbsp;
               <a href="{{{ pm:unsubscribe }}}" target="_blank">
-                Unsubscribe
+                Cancelar suscripción
+                {/* Unsubscribe */}
               </a>
             </>
           )}
         </MjmlText>
         {footnote && (
           <MjmlText cssClass="footer">
-            If you have any feedback or questions about this email, simply reply
-            to it. I'd love to hear from you!
+            Si tienes alguna sugerencia o pregunta sobre este correo,
+            simplemente responde a este correo. ¡Nos encantaría escucharte!
+            {/* If you have any feedback or questions about this email, simply reply
+            to it. I'd love to hear from you! */}
           </MjmlText>
         )}
       </MjmlColumn>

@@ -25,7 +25,8 @@ export default async function handler(
       to: "info@corewave.xyz",
       from: "info@corewave.xyz",
       ...(email && { replyTo: email }),
-      subject: "🎉 New Feedback Received!",
+      subject: "🎉 Nuevo feedback recibido!",
+      // subject: "🎉 New Feedback Received!",
       component: <FeedbackEmail email={email} feedback={feedback} />,
     });
     res.status(200).json({ response });

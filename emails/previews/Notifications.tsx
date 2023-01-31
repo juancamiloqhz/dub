@@ -25,8 +25,8 @@ export function FeedbackEmail() {
   return (
     <FeedbackEmailChild
       email="info@corewave.xyz"
-      feedback="This is a 
-test feedback email"
+      feedback="Este es un correo de prueba de feedback"
+      // feedback="This is a test feedback email"
     />
   );
 }

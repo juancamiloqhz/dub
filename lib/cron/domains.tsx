@@ -60,7 +60,8 @@ export const handleDomainUpdates = async (
           "cron",
         ),
         sendMail({
-          subject: `Your project ${projectSlug} has been deleted`,
+          subject: `Tu proyecto ${projectSlug} ha sido eliminado`,
+          // subject: `Your project ${projectSlug} has been deleted`,
           to: ownerEmail,
           component: (
             <ProjectDeleted domain={domain} projectSlug={projectSlug} />
@@ -90,7 +91,8 @@ const sendDomainInvalidEmail = async (
       "cron",
     ),
     sendMail({
-      subject: `Your domain ${domain} needs to be configured`,
+      subject: `Tu dominio ${domain} necesita ser configurado`,
+      // subject: `Your domain ${domain} needs to be configured`,
       to: ownerEmail,
       component: (
         <InvalidDomain

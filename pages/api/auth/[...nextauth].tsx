@@ -15,7 +15,8 @@ export const authOptions: NextAuthOptions = {
       sendVerificationRequest({ identifier, url }) {
         try {
           sendMail({
-            subject: "Your CoreWave Login Link",
+            subject: "Tu enlace de inicio de sesión en CoreWave",
+            // subject: "Your CoreWave Login Link",
             to: identifier,
             component: <LoginLink url={url} />,
           });
@@ -73,7 +74,8 @@ export const authOptions: NextAuthOptions = {
         const email = message.user.email;
         await Promise.all([
           sendMarketingMail({
-            subject: "✨ Welcome to CoreWave! ✨",
+            subject: "✨ ¡Bienvenido a CoreWave! ✨",
+            // subject: "✨ Welcome to CoreWave! ✨",
             to: email,
             component: <WelcomeEmail />,
           }),

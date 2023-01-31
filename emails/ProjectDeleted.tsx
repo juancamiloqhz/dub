@@ -25,12 +25,19 @@ export default function ProjectDeleted({
       <Head />
       <MjmlBody width={500}>
         <MjmlWrapper cssClass="container">
-          <Header title="Project Deleted" />
+          <Header
+            title="Proyecto Eliminado"
+            // title="Project Deleted"
+          />
           <MjmlSection cssClass="smooth">
             <MjmlColumn>
-              <MjmlText cssClass="paragraph">Hey there!</MjmlText>
               <MjmlText cssClass="paragraph">
-                Just wanted to let you know that your domain{" "}
+                👋 Hola!
+                {/* Hey there! */}
+              </MjmlText>
+              <MjmlText cssClass="paragraph">
+                Queríamos avisarte que tu dominio{" "}
+                {/* Just wanted to let you know that your domain{" "} */}
                 <code>
                   <a
                     rel="nofollow"
@@ -42,30 +49,38 @@ export default function ProjectDeleted({
                     {domain}
                   </a>
                 </code>{" "}
-                for your CoreWave project{" "}
+                de tu proyecto en CoreWave{" "}
+                {/* for your CoreWave project{" "} */}
                 <a
                   href={`https://app.corewave.xyz/${projectSlug}`}
                   target="_blank"
                 >
                   {projectSlug}↗
                 </a>{" "}
-                has been invalid for 30 days. As a result, your project has been
-                deleted from CoreWave.
+                ha sido inválido por 30 días. Como resultado, tu proyecto ha
+                sido eliminado de CoreWave.
+                {/* has been invalid for 30 days. As a result, your project has been
+                deleted from CoreWave. */}
               </MjmlText>
               <MjmlText cssClass="paragraph">
-                If you would like to restore the project, you can easily create
-                it again on CoreWave with the link below.
+                Si quieres restaurar el proyecto, puedes crearlo de nuevo en
+                CoreWave con el enlace de abajo.
+                {/* If you would like to restore the project, you can easily create
+                it again on CoreWave with the link below. */}
               </MjmlText>
               <ButtonPrimary
                 link={`https://app.corewave.xyz/`}
-                uiText="Create a new project"
+                uiText="Crear un nuevo proyecto"
+                // uiText="Create a new project"
               />
               <MjmlText cssClass="paragraph">
-                If you did not want to keep this project on CoreWave anyway, you
-                can simply ignore this email.
+                Si no quieres restaurar el proyecto, puedes ignorar este correo
+                electrónico.
+                {/* If you did not want to keep this project on CoreWave anyway, you
+                can simply ignore this email. */}
               </MjmlText>
               <MjmlText cssClass="paragraph" color={grayDark}>
-                Juan from CoreWave
+                Juan de CoreWave
               </MjmlText>
               <Divider />
             </MjmlColumn>

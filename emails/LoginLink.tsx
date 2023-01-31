@@ -19,17 +19,30 @@ export default function LoginLink({ url }: { url: string }): JSX.Element {
       <Head />
       <MjmlBody width={500}>
         <MjmlWrapper cssClass="container">
-          <Header title="Your Login Link" />
+          <Header
+            title="Tu Enlace Para Iniciar Sesión"
+            // title="Your Login Link"
+          />
           <MjmlSection cssClass="smooth">
             <MjmlColumn>
-              <MjmlText cssClass="paragraph">Welcome to CoreWave!</MjmlText>
               <MjmlText cssClass="paragraph">
-                Please click the magic link below to sign in to your account.
+                !Bienvenido a CoreWave!
+                {/* Welcome to CoreWave! */}
               </MjmlText>
-              <ButtonPrimary link={url} uiText="Sign In" />
               <MjmlText cssClass="paragraph">
-                If you're on a mobile device, you can also copy the link below
-                and paste it into the browser of your choice.
+                Por favor, haz clic en el enlace de abajo para iniciar sesión.
+                {/* Please click the magic link below to sign in to your account. */}
+              </MjmlText>
+              <ButtonPrimary
+                link={url}
+                uiText="Iniciar Sesión"
+                // uiText="Sign In"
+              />
+              <MjmlText cssClass="paragraph">
+                Si estás en un dispositivo móvil, también puedes copiar el
+                enlace de abajo y pegarlo en el navegador de tu elección.
+                {/* If you're on a mobile device, you can also copy the link below
+                and paste it into the browser of your choice. */}
               </MjmlText>
               <MjmlText cssClass="paragraph">
                 <a
@@ -43,7 +56,9 @@ export default function LoginLink({ url }: { url: string }): JSX.Element {
                 </a>
               </MjmlText>
               <MjmlText cssClass="paragraph">
-                If you did not request this email, you can safely ignore it.
+                Si no solicitaste este correo electrónico, puedes ignorarlo con
+                total seguridad.
+                {/* If you did not request this email, you can safely ignore it. */}
               </MjmlText>
               <Divider />
             </MjmlColumn>
