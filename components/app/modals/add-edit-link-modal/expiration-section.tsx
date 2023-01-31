@@ -32,7 +32,10 @@ export default function ExpirationSection({
   return (
     <div className="border-b border-gray-200 pb-5">
       <div className="flex items-center justify-between">
-        <h2 className="text-sm font-medium text-gray-900">Expiration Date</h2>
+        <h2 className="text-sm font-medium text-gray-900">
+          Fecha de Expiración
+          {/* Expiration Date */}
+        </h2>
         <Switch fn={() => setEnabled(!enabled)} checked={enabled} />
       </div>
       {enabled && (

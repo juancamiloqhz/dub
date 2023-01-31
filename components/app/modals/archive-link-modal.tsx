@@ -54,12 +54,16 @@ function ArchiveLinkModal({
             height={20}
           />
           <h3 className="text-lg font-medium">
-            {archived ? "Archive" : "Unarchive"} {shortlink}
+            {/* {archived ? "Archive" : "Unarchive"} {shortlink} */}
+            {archived ? "Archivar" : "Desarchivar"} {shortlink}
           </h3>
           <p className="text-sm text-gray-500">
             {archived
+              ? "Los enlaces archivados seguirán funcionando, pero ya no aparecerán en tu panel principal."
+              : "Al desarchivar este enlace, volverá a aparecer en tu panel principal."}
+            {/* {archived
               ? "Archived links will still work - they just won't show up on your main dashboard."
-              : "By unarchiving this link, it will show up on your main dashboard again."}
+              : "By unarchiving this link, it will show up on your main dashboard again."} */}
           </p>
         </div>
 
@@ -102,7 +106,8 @@ function ArchiveLinkModal({
             {archiving ? (
               <LoadingDots color="#808080" />
             ) : (
-              <p>Confirm {archived ? "archive" : "unarchive"}</p>
+              <p>Confirmar {archived ? "archivar" : "desarchivar"}</p>
+              // <p>Confirm {archived ? "archive" : "unarchive"}</p>
             )}
           </button>
         </div>

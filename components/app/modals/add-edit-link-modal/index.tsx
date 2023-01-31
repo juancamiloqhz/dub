@@ -108,9 +108,12 @@ function AddEditLinkModal({
     if (password) {
       setData((prev) => ({
         ...prev,
-        title: "Password Required",
+        title: "Contraseña Requerida",
+        // title: "Password Required",
         description:
-          "This link is password protected. Please enter the password to view it.",
+          "Este enlace está protegido por contraseña. Por favor ingrese la contraseña para verlo.",
+        // description:
+        //   "This link is password protected. Please enter the password to view it.",
         image: "/_static/password-protected.png",
       }));
       return;
@@ -247,12 +250,19 @@ function AddEditLinkModal({
             />
             <h3 className="text-lg font-medium">
               {props
+                ? `Editar ${linkConstructor({
+                    key: props.key,
+                    domain,
+                    pretty: true,
+                  })}`
+                : "Agrega un nuevo enlace"}
+              {/* {props
                 ? `Edit ${linkConstructor({
                     key: props.key,
                     domain,
                     pretty: true,
                   })}`
-                : "Add a new link"}
+                : "Add a new link"} */}
             </h3>
           </div>
 
@@ -288,7 +298,8 @@ function AddEditLinkModal({
                 } else if (res.status === 400) {
                   setUrlError(true);
                 } else {
-                  alert("Something went wrong");
+                  alert("Algo salió mal");
+                  // alert("Something went wrong");
                 }
               });
             }}
@@ -301,11 +312,13 @@ function AddEditLinkModal({
                     htmlFor={`url-${randomIdx}`}
                     className="block text-sm font-medium text-gray-700"
                   >
-                    Destination URL
+                    URL de Destino
+                    {/* Destination URL */}
                   </label>
                   {urlError && (
                     <p className="text-sm text-red-600" id="key-error">
-                      Invalid url.
+                      URL inválida.
+                      {/* Invalid url. */}
                     </p>
                   )}
                 </div>
@@ -315,7 +328,7 @@ function AddEditLinkModal({
                     id={`url-${randomIdx}`}
                     type="url"
                     required
-                    placeholder="https://github.com/juancamiloqhz/dub"
+                    placeholder="https://corewave.xyz/lanzamiento"
                     value={url}
                     onChange={(e) => {
                       setUrlError(false);
@@ -344,7 +357,8 @@ function AddEditLinkModal({
                     htmlFor={`key-${randomIdx}`}
                     className="block text-sm font-medium text-gray-700"
                   >
-                    Short Link
+                    Enlace Corto
+                    {/* Short Link */}
                   </label>
                   {lockKey ? (
                     <button
@@ -352,12 +366,14 @@ function AddEditLinkModal({
                       type="button"
                       onClick={() => {
                         window.confirm(
-                          "Editing an existing short link will result in broken links and reset its analytics. Are you sure you want to continue?",
+                          "Editar un enlace corto existente resultará en enlaces rotos y reiniciará sus estadísticas. ¿Estás seguro de que quieres continuar?",
+                          // "Editing an existing short link will result in broken links and reset its analytics. Are you sure you want to continue?",
                         ) && setLockKey(false);
                       }}
                     >
                       <Lock className="h-3 w-3" />
-                      <p>Unlock</p>
+                      <p>Desbloquear</p>
+                      {/* <p>Unlock</p> */}
                     </button>
                   ) : (
                     <button
@@ -371,7 +387,8 @@ function AddEditLinkModal({
                       ) : (
                         <Random className="h-3 w-3" />
                       )}
-                      <p>{generatingSlug ? "Generating" : "Randomize"}</p>
+                      <p>{generatingSlug ? "Generando" : "Aleatorio"}</p>
+                      {/* <p>{generatingSlug ? "Generating" : "Randomize"}</p> */}
                     </button>
                   )}
                 </div>
@@ -395,7 +412,7 @@ function AddEditLinkModal({
                           ? "border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 focus:ring-red-500"
                           : "border-gray-300 text-gray-900 placeholder-gray-300 focus:border-gray-500 focus:ring-gray-500"
                       } block w-full rounded-r-md pr-10 text-sm focus:outline-none`}
-                      placeholder="github"
+                      placeholder="lanzamiento"
                       value={key}
                       onChange={(e) => {
                         setKeyExistsError(false);
@@ -416,7 +433,8 @@ function AddEditLinkModal({
                 </div>
                 {keyExistsError && (
                   <p className="mt-2 text-sm text-red-600" id="key-error">
-                    Short link is already in use.
+                    Este enlace corto ya está en uso.
+                    {/* Short link is already in use. */}
                   </p>
                 )}
               </div>
@@ -432,7 +450,8 @@ function AddEditLinkModal({
               </div>
               <div className="relative flex justify-center">
                 <span className="bg-gray-50 px-2 text-sm text-gray-500">
-                  Optional
+                  Opcional
+                  {/* Optional */}
                 </span>
               </div>
             </div>
@@ -456,14 +475,18 @@ function AddEditLinkModal({
             >
               {homepageDemo ? (
                 <Tooltip
-                  content="This is a demo link. You can't edit it."
+                  content="Esta es una demostración. No puedes editarla."
+                  // content="This is a demo link. You can't edit it."
                   fullWidth
                 >
                   <button
                     disabled={true}
                     className=" flex h-10 w-full cursor-not-allowed items-center justify-center rounded-md border border-gray-200 bg-gray-100 text-sm text-gray-400 transition-all focus:outline-none"
                   >
-                    <p className="text-sm">Save changes</p>
+                    <p className="text-sm">
+                      Guardar cambios
+                      {/* Save changes */}
+                    </p>
                   </button>
                 </Tooltip>
               ) : (
@@ -479,7 +502,8 @@ function AddEditLinkModal({
                     <LoadingDots color="#808080" />
                   ) : (
                     <p className="text-sm">
-                      {props ? "Save changes" : "Add link"}
+                      {props ? "Guardar cambios" : "Agregar enlace"}
+                      {/* {props ? "Save changes" : "Add link"} */}
                     </p>
                   )}
                 </button>
@@ -512,16 +536,23 @@ function AddEditLinkButton({
         <TooltipContent
           title={
             isOwner
-              ? "You have exceeded your usage limit. We're still collecting data on your existing links, but you need to upgrade to add more links."
-              : "The owner of this project has exceeded their usage limit. We're still collecting data on all existing links, but they need to upgrade their plan to add more links."
+              ? "Has excedido tu límite de uso. Todavía estamos recopilando datos sobre tus enlaces existentes, pero necesitas actualizar tu plan para agregar más enlaces."
+              : "El propietario de este proyecto ha excedido su límite de uso. Todavía estamos recopilando datos sobre todos los enlaces existentes, pero necesitan actualizar su plan para agregar más enlaces."
           }
-          cta={isOwner && "Upgrade"}
+          // title={
+          //   isOwner
+          //     ? "You have exceeded your usage limit. We're still collecting data on your existing links, but you need to upgrade to add more links."
+          //     : "The owner of this project has exceeded their usage limit. We're still collecting data on all existing links, but they need to upgrade their plan to add more links."
+          // }
+          cta={isOwner && "Mejorar plan"}
+          // cta={isOwner && "Upgrade"}
           ctaLink={isOwner && "/settings"}
         />
       }
     >
       <div className="cursor-not-allowed rounded-md border border-gray-200 px-5 py-2 text-sm font-medium text-gray-300 transition-all duration-75">
-        Add
+        Nuevo enlace
+        {/* Add */}
       </div>
     </Tooltip>
   ) : (
@@ -529,7 +560,8 @@ function AddEditLinkButton({
       onClick={() => setShowAddEditLinkModal(true)}
       className="rounded-md border border-black bg-black px-5 py-2 text-sm font-medium text-white transition-all duration-75 hover:bg-white hover:text-black active:scale-95"
     >
-      Add
+      Nuevo enlace
+      {/* Add */}
     </button>
   );
 }

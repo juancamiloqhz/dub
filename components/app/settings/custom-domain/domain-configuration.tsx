@@ -26,9 +26,12 @@ export default function DomainConfiguration({
     return (
       <div className="border-t border-gray-200 pt-5">
         <p className="text-sm">
-          Please set the following TXT record on{" "}
+          Por favor, establece el siguiente registro TXT en{" "}
+          <InlineSnippet>{domainJson.apexName}</InlineSnippet> para demostrar la
+          propiedad de <InlineSnippet>{domainJson.name}</InlineSnippet>:
+          {/* Please set the following TXT record on{" "}
           <InlineSnippet>{domainJson.apexName}</InlineSnippet> to prove
-          ownership of <InlineSnippet>{domainJson.name}</InlineSnippet>:
+          ownership of <InlineSnippet>{domainJson.name}</InlineSnippet>: */}
         </p>
         <div className="my-5 flex items-start justify-start space-x-10 rounded-md bg-gray-50 p-2">
           <div>
@@ -52,9 +55,13 @@ export default function DomainConfiguration({
           </div>
         </div>
         <p className="text-sm">
-          Warning: if you are using this domain for another site, setting this
+          Advertencia: si estás utilizando este dominio para otro sitio, la
+          configuración de este registro TXT transferirá la propiedad del
+          dominio a este sitio y lo romperá. Ten cuidado al configurar este
+          registro.
+          {/* Warning: if you are using this domain for another site, setting this
           TXT record will transfer domain ownership away from that site and
-          break it. Please exercise caution when setting this record.
+          break it. Please exercise caution when setting this record. */}
         </p>
       </div>
     );
@@ -79,7 +86,8 @@ export default function DomainConfiguration({
               : "border-white text-gray-400"
           } ease border-b-2 pb-1 text-sm transition-all duration-150`}
         >
-          A Record{!subdomain && " (recommended)"}
+          A Record{!subdomain && " (recomendado)"}
+          {/* A Record{!subdomain && " (recommended)"} */}
         </button>
         <button
           onClick={() => setRecordType("CNAME")}
@@ -89,17 +97,25 @@ export default function DomainConfiguration({
               : "border-white text-gray-400"
           } ease border-b-2 pb-1 text-sm transition-all duration-150`}
         >
-          CNAME Record{subdomain && " (recommended)"}
+          CNAME Record{subdomain && " (recomendado)"}
+          {/* CNAME Record{subdomain && " (recommended)"} */}
         </button>
       </div>
       <div className="my-3 text-left">
         <p className="my-5 text-sm">
-          To configure your {recordType === "A" ? "apex domain" : "subdomain"} (
+          Para configurar tu{" "}
+          {recordType === "A" ? "dominio apex" : "subdominio"} (
+          <InlineSnippet>
+            {recordType === "A" ? domainJson.apexName : domainJson.name}
+          </InlineSnippet>
+          ), establece el siguiente registro {recordType} en tu proveedor de DNS
+          para continuar:
+          {/* To configure your {recordType === "A" ? "apex domain" : "subdomain"} (
           <InlineSnippet>
             {recordType === "A" ? domainJson.apexName : domainJson.name}
           </InlineSnippet>
           ), set the following {recordType} record on your DNS provider to
-          continue:
+          continue: */}
         </p>
         <div className="flex items-center justify-start space-x-10 rounded-md bg-gray-50 p-2">
           <div>
@@ -124,9 +140,12 @@ export default function DomainConfiguration({
           </div>
         </div>
         <p className="mt-5 text-sm">
-          Note: for TTL, if <InlineSnippet>86400</InlineSnippet> is not
+          Nota: para TTL, si <InlineSnippet>86400</InlineSnippet> no está
+          disponible, establece el valor más alto posible. Además, la
+          propagación de dominio puede tardar hasta una hora.
+          {/* Note: for TTL, if <InlineSnippet>86400</InlineSnippet> is not
           available, set the highest value possible. Also, domain propagation
-          can take up to an hour.
+          can take up to an hour. */}
         </p>
       </div>
     </div>

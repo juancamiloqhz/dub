@@ -51,10 +51,13 @@ function DeleteLinkModal({
             width={20}
             height={20}
           />
-          <h3 className="text-lg font-medium">Delete {shortlink}</h3>
+          <h3 className="text-lg font-medium">Eliminar {shortlink}</h3>
+          {/* <h3 className="text-lg font-medium">Delete {shortlink}</h3> */}
           <p className="text-center text-sm text-gray-500">
-            Warning: Deleting this link will remove all of its stats. This
-            action cannot be undone.
+            Advertencia: Eliminar este enlace eliminará todas sus estadísticas.
+            Esta acción no se puede deshacer.
+            {/* Warning: Deleting this link will remove all of its stats. This
+            action cannot be undone. */}
           </p>
         </div>
 
@@ -93,8 +96,10 @@ function DeleteLinkModal({
               htmlFor="verification"
               className="block text-sm text-gray-700"
             >
-              To verify, type <span className="font-semibold">{shortlink}</span>{" "}
-              below
+              Para verificar, escribe{" "}
+              <span className="font-semibold">{shortlink}</span> abajo
+              {/* To verify, type <span className="font-semibold">{shortlink}</span>{" "}
+              below */}
             </label>
             <div className="relative mt-1 rounded-md shadow-sm">
               <input
@@ -117,7 +122,14 @@ function DeleteLinkModal({
                 : "border-red-600 bg-red-600 text-white hover:bg-white hover:text-red-600"
             } flex h-10 w-full items-center justify-center rounded-md border text-sm transition-all focus:outline-none`}
           >
-            {deleting ? <LoadingDots color="#808080" /> : <p>Confirm delete</p>}
+            {deleting ? (
+              <LoadingDots color="#808080" />
+            ) : (
+              <p>
+                Eliminar permanentemente
+                {/* Confirm delete */}
+              </p>
+            )}
           </button>
         </form>
       </div>

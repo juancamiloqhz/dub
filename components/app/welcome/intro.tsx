@@ -52,21 +52,25 @@ export default function Intro({
             className="font-display text-4xl font-bold text-gray-800 transition-colors sm:text-5xl"
             variants={STAGGER_CHILD_VARIANTS}
           >
-            Welcome to CoreWave
+            {/* Welcome to CoreWave */}
+            Bienvenido a CoreWave
           </motion.h1>
           <motion.p
             className="max-w-md text-gray-600 transition-colors sm:text-lg"
             variants={STAGGER_CHILD_VARIANTS}
           >
-            CoreWave gives you marketing superpowers with short links that stand
-            out.
+            {/* CoreWave gives you marketing superpowers with short links that stand
+            out. */}
+            CoreWave te da superpoderes de marketing con enlaces cortos que
+            destacan.
           </motion.p>
           <motion.button
             variants={STAGGER_CHILD_VARIANTS}
             className="rounded-full bg-gray-800 px-10 py-2 font-medium text-white transition-colors hover:bg-black"
             onClick={() => setState("interim")}
           >
-            Get Started
+            {/* Get Started */}
+            Empezar Ahora
           </motion.button>
         </motion.div>
       )}

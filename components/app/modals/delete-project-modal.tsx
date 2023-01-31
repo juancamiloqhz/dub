@@ -39,10 +39,16 @@ function DeleteProjectModal({
             width={20}
             height={20}
           />
-          <h3 className="text-lg font-medium">Delete Project</h3>
+          <h3 className="text-lg font-medium">
+            Eliminar Proyecto
+            {/* Delete Project */}
+          </h3>
           <p className="text-center text-sm text-gray-500">
-            Warning: This will permanently delete your project, custom domain,
-            and all associated links + their stats.
+            Advertencia: Esta acción eliminará permanentemente tu proyecto,
+            dominio personalizado y todos los enlaces asociados + sus
+            estadísticas.
+            {/* Warning: This will permanently delete your project, custom domain,
+            and all associated links + their stats. */}
           </p>
         </div>
 
@@ -62,7 +68,8 @@ function DeleteProjectModal({
                 router.push("/");
                 mutate("/api/projects");
                 setShowDeleteProjectModal(false);
-                toast.success("Project deleted successfully.");
+                toast.success("Proyecto eliminado con éxito.");
+                // toast.success("Project deleted successfully.");
               } else {
                 const error = await res.json();
                 toast.error(JSON.stringify(error));
@@ -76,9 +83,12 @@ function DeleteProjectModal({
               htmlFor="project-slug"
               className="block text-sm font-medium text-gray-700"
             >
-              Enter the project slug{" "}
+              Ingresa el slug del proyecto{" "}
+              <span className="font-semibold text-black">{slug}</span> para
+              continuar:
+              {/* Enter the project slug{" "}
               <span className="font-semibold text-black">{slug}</span> to
-              continue:
+              continue: */}
             </label>
             <div className="relative mt-1 rounded-md shadow-sm">
               <input
@@ -86,6 +96,7 @@ function DeleteProjectModal({
                 name="project-slug"
                 id="project-slug"
                 autoFocus={false}
+                required
                 pattern={slug}
                 className="block w-full rounded-md border-gray-300 pr-10 text-gray-900 placeholder-gray-300 focus:border-gray-500 focus:outline-none focus:ring-gray-500 sm:text-sm"
               />
@@ -97,18 +108,24 @@ function DeleteProjectModal({
               htmlFor="verification"
               className="block text-sm text-gray-700"
             >
-              To verify, type{" "}
+              Para verificar, escribe{" "}
+              <span className="font-semibold text-black">
+                eliminar mi proyecto
+              </span>{" "}
+              abajo
+              {/* To verify, type{" "}
               <span className="font-semibold text-black">
                 confirm delete project
               </span>{" "}
-              below
+              below */}
             </label>
             <div className="relative mt-1 rounded-md shadow-sm">
               <input
                 type="text"
                 name="verification"
                 id="verification"
-                pattern="confirm delete project"
+                pattern="eliminar mi proyecto"
+                // pattern="confirm delete project"
                 required
                 autoFocus={false}
                 className="block w-full rounded-md border-gray-300 pr-10 text-gray-900 placeholder-gray-300 focus:border-gray-500 focus:outline-none focus:ring-gray-500 sm:text-sm"
@@ -127,7 +144,10 @@ function DeleteProjectModal({
             {deleting ? (
               <LoadingDots color="#808080" />
             ) : (
-              <p>Confirm delete project</p>
+              <p>
+                Confirma eliminar proyecto
+                {/* Confirm delete project */}
+              </p>
             )}
           </button>
         </form>

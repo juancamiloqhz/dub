@@ -35,7 +35,8 @@ export default function PasswordSection({
     <div className="border-b border-gray-200 pb-5">
       <div className="flex items-center justify-between">
         <h2 className="text-sm font-medium text-gray-900">
-          Password Protection
+          Proteger con Contraseña
+          {/* Password Protection */}
         </h2>
         <Switch fn={() => setEnabled(!enabled)} checked={enabled} />
       </div>
@@ -50,7 +51,8 @@ export default function PasswordSection({
             type={showPassword ? "text" : "password"}
             className="block w-full rounded-md border-gray-300 text-sm text-gray-900 placeholder-gray-300 focus:border-gray-500 focus:outline-none focus:ring-gray-500"
             value={password || ""}
-            placeholder="Enter password"
+            placeholder="Ingresa la contraseña"
+            // placeholder="Enter password"
             onChange={(e) => {
               setData({ ...data, password: e.target.value });
             }}

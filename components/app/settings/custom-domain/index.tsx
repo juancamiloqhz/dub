@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { useRouter } from "next/router";
 import useSWR, { mutate } from "swr";
 import {
@@ -33,13 +34,31 @@ export default function CustomDomain() {
 
   const { setShowEditDomainModal, EditDomainModal } = useEditDomainModal();
 
+  const statusTxt = useMemo(() => {
+    if (data) {
+      if (data.status === "Valid Configuration") return "Configuración Válida";
+      if (data.status === "Invalid Configuration")
+        return "Configuración Inválida";
+      if (data.status === "Pending Verification")
+        return "Verificación Pendiente";
+      if (data.status === "Domain Not Found") return "Dominio No Encontrado";
+      if (data.status === "Unknown Error") return "Error Desconocido";
+      return "";
+    }
+    return "";
+  }, [data]);
+
   return (
     <div className="max-w-full rounded-lg border border-gray-200 bg-white py-5 sm:py-10">
       {domain && <EditDomainModal />}
       <div className="flex flex-col space-y-3 px-5 sm:px-10">
-        <h2 className="text-xl font-medium">Custom Domain</h2>
+        <h2 className="text-xl font-medium">
+          Dominio Personalizado
+          {/* Custom Domain */}
+        </h2>
         <p className="text-sm text-gray-500">
-          This is the custom domain associated with your project.
+          Este es el dominio personalizado asociado a tu proyecto.
+          {/* This is the custom domain associated with your project. */}
         </p>
       </div>
       <div className="my-4 border-b border-gray-200 sm:my-8" />
@@ -73,7 +92,8 @@ export default function CustomDomain() {
                     : "bg-white hover:border-black hover:text-black"
                 } h-9 w-24 rounded-md border border-solid border-gray-200 text-sm text-gray-500 transition-all duration-150 ease-in-out focus:outline-none`}
               >
-                {isValidating ? <LoadingDots /> : "Refresh"}
+                {/* {isValidating ? <LoadingDots /> : "Refresh"} */}
+                {isValidating ? <LoadingDots /> : "Actualizar"}
               </button>
             ) : (
               <div className="h-9 w-24 animate-pulse rounded-md bg-gray-200" />
@@ -83,7 +103,8 @@ export default function CustomDomain() {
                 onClick={() => setShowEditDomainModal(true)}
                 className="h-9 w-24 rounded-md border border-solid border-black bg-black text-sm text-white transition-all duration-150 ease-in-out hover:bg-white hover:text-black focus:outline-none"
               >
-                Change
+                Cambiar
+                {/* Change */}
               </button>
             ) : (
               <div className="h-9 w-24 animate-pulse rounded-md bg-gray-200" />
@@ -103,7 +124,8 @@ export default function CustomDomain() {
             <LoadingCircle dimensions="w-5 h-5 mr-1" />
           )}
           <p className="text-sm text-gray-500">
-            {data ? data.status : "Checking Domain Status"}
+            {/* {data ? data.status : "Checking Domain Status"} */}
+            {data ? statusTxt : "Verificando Estado del Dominio"}
           </p>
         </div>
         {data && data.status !== "Valid Configuration" && (

@@ -49,7 +49,10 @@ export default function Devices() {
   return (
     <div className="relative h-[420px] overflow-scroll border border-gray-200 bg-white px-7 py-5 scrollbar-hide  sm:rounded-lg sm:border-gray-100 sm:shadow-lg">
       <div className="mb-5 flex justify-between">
-        <h1 className="text-xl font-semibold">Devices</h1>
+        <h1 className="text-xl font-semibold">
+          Dispositivos
+          {/* Devices */}
+        </h1>
         <BadgeSelect
           options={["device", "browser", "os", "bot"]}
           selected={tab}
@@ -101,7 +104,10 @@ export default function Devices() {
               </div>
             ))
           ) : (
-            <p className="text-sm text-gray-600">No data available</p>
+            <p className="text-sm text-gray-600">
+              {/* No data available */}
+              No hay datos disponibles
+            </p>
           )
         ) : (
           <LoadingCircle />

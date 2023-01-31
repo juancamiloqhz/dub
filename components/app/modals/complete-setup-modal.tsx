@@ -22,9 +22,15 @@ function CompleteSetupModal({
   const { slug } = router.query as { slug: string };
 
   const tasks = [
-    { display: "Set up your custom domain", cta: `/${slug}/settings` },
-    { display: "Invite your teammates", cta: `/${slug}/settings/people` },
-    { display: "Create or import your links", cta: "closeModal" },
+    // { display: "Set up your custom domain", cta: `/${slug}/settings` },
+    { display: "Configura tu dominio personalizado", cta: `/${slug}/settings` },
+    // { display: "Invite your teammates", cta: `/${slug}/settings/people` },
+    {
+      display: "Invita a tus compañeros de equipo",
+      cta: `/${slug}/settings/people`,
+    },
+    // { display: "Create or import your links", cta: "closeModal" },
+    { display: "Crea o importa tus enlaces", cta: "closeModal" },
   ];
 
   return (
@@ -41,10 +47,15 @@ function CompleteSetupModal({
             width={20}
             height={20}
           />
-          <h3 className="text-lg font-medium">You're almost there!</h3>
+          <h3 className="text-lg font-medium">
+            Ya casi estás listo!
+            {/* You're almost there! */}
+          </h3>
           <p className="text-center text-sm text-gray-500">
-            Complete the following steps and start sharing your branded short
-            links.
+            Completa los siguientes pasos y comienza a compartir enlaces con tu
+            marca.
+            {/* Complete the following steps and start sharing your branded short
+            links. */}
           </p>
         </div>
         <div className="flex flex-col space-y-6 bg-gray-50 px-4 py-8 text-left sm:px-12">

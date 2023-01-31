@@ -20,7 +20,10 @@ export default function LinkFilters() {
       >
         <div className="flex items-center space-x-2 text-gray-700">
           <Filter className="h-4 w-4 shrink-0" />
-          <p className="text-sm">Filters</p>
+          <p className="text-sm">
+            Filtros
+            {/* Filters */}
+          </p>
         </div>
         <ChevronDown
           className={`h-5 w-5 text-gray-400 ${

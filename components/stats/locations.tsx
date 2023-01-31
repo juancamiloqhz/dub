@@ -46,7 +46,10 @@ export default function Locations() {
   return (
     <div className="relative h-[420px] overflow-scroll border border-gray-200 bg-white px-7 py-5 scrollbar-hide  sm:rounded-lg sm:border-gray-100 sm:shadow-lg">
       <div className="mb-5 flex justify-between">
-        <h1 className="text-xl font-semibold">Locations</h1>
+        <h1 className="text-xl font-semibold">
+          {/* Locations */}
+          Ubicaciones
+        </h1>
         <BadgeSelect
           options={["country", "city"]}
           selected={tab}
@@ -91,7 +94,10 @@ export default function Locations() {
               </div>
             ))
           ) : (
-            <p className="text-sm text-gray-600">No data available</p>
+            <p className="text-sm text-gray-600">
+              {/* No data available */}
+              No hay datos disponibles
+            </p>
           )
         ) : (
           <LoadingCircle />

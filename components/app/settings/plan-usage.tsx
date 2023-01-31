@@ -47,7 +47,7 @@ export default function PlanUsage() {
       <UpgradePlanModal />
       <div className="flex flex-col space-y-3 p-10">
         <h2 className="text-xl font-medium">
-          Plan &amp; Uso
+          Plan y Uso
           {/* Plan &amp; Usage */}
         </h2>
         <p className="text-sm text-gray-500">
@@ -67,7 +67,8 @@ export default function PlanUsage() {
             </span>
           ) : (
             <span className="rounded-full bg-gray-200 px-2 py-0.5 text-xs text-gray-200">
-              load
+              cargar
+              {/* load */}
             </span>
           )}{" "}
           .{/* plan. */}
@@ -146,22 +147,30 @@ export default function PlanUsage() {
         {plan ? (
           plan === "Pro 1M" ? (
             <p className="text-sm text-gray-500">
-              For higher limits, contact us to upgrade to the Enterprise plan.
+              Para aumentar los límites, contáctanos para actualizar a al plan
+              Empresarial.
+              {/* For higher limits, contact us to upgrade to the Enterprise plan. */}
             </p>
           ) : (
             <p className="text-sm text-gray-500">
-              {plan === "Gratuito" ? "For " : "To "}
+              Para {/* {plan === "Free" ? "For " : "To "} */}{" "}
               <Tooltip content={<ProTiers usageLimit={usageLimit} />}>
                 {/* TODO - a simpler version of the homepage slider */}
                 <span className="cursor-default font-medium text-gray-700 underline underline-offset-2 hover:text-black">
                   {plan === "Gratuito"
+                    ? "aumentar los límites"
+                    : "cambiar los límites de clics mensuales"}
+                  {/* {plan === "Free"
                     ? "increased limits"
-                    : "change your monthly click limits"}
+                    : "change your monthly click limits"} */}
                 </span>
               </Tooltip>
               {plan === "Gratuito"
+                ? ", actualiza a un plan Pro."
+                : ", gestiona tu suscripción en Stripe."}
+              {/* {plan === "Free"
                 ? ", upgrade to a Pro subscription."
-                : ", manage your subscription on Stripe."}
+                : ", manage your subscription on Stripe."} */}
             </p>
           )
         ) : (
@@ -173,9 +182,10 @@ export default function PlanUsage() {
               onClick={() => {
                 setShowUpgradePlanModal(true);
               }}
-              className="h-9 w-24 rounded-md border border-blue-500 bg-blue-500 text-sm text-white transition-all duration-150 ease-in-out hover:bg-white hover:text-blue-500 focus:outline-none"
+              className="h-9 w-28 rounded-md border border-blue-500 bg-blue-500 text-sm text-white transition-all duration-150 ease-in-out hover:bg-white hover:text-blue-500 focus:outline-none"
             >
-              Upgrade
+              Mejorar Plan
+              {/* Upgrade */}
             </button>
           ) : (
             <div className="flex space-x-3">
@@ -184,7 +194,8 @@ export default function PlanUsage() {
                   href="mailto:info@corewave.xyz?subject=Upgrade%20to%20Enterprise%20Plan"
                   className="flex h-9 w-24 items-center justify-center rounded-md border border-violet-600 bg-violet-600 text-sm text-white transition-all duration-150 ease-in-out hover:bg-white hover:text-violet-600 focus:outline-none"
                 >
-                  Contact Us
+                  Contáctanos
+                  {/* Contact Us */}
                 </a>
               )}
               <button
@@ -209,7 +220,8 @@ export default function PlanUsage() {
                     : "border-black bg-black text-white hover:bg-white hover:text-black"
                 }  h-9 w-40 rounded-md border text-sm transition-all duration-150 ease-in-out focus:outline-none`}
               >
-                {clicked ? <LoadingDots /> : "Manage Subscription"}
+                {/* {clicked ? <LoadingDots /> : "Manage Subscription"} */}
+                {clicked ? <LoadingDots /> : "Gestionar Suscripción"}
               </button>
             </div>
           )

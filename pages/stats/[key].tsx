@@ -15,12 +15,18 @@ export default function StatsPage({
   return (
     <HomeLayout
       meta={{
-        title: `Stats for corewave.xyz/${_key} (${nFormatter(
+        // title: `Stats for corewave.xyz/${_key} (${nFormatter(
+        //   clicks,
+        // )} clicks) - CoreWave`,
+        title: `Estadísticas para corewave.xyz/${_key} (${nFormatter(
           clicks,
-        )} clicks) - CoreWave`,
-        description: `Stats page for corewave.xyz/${_key}, which redirects to ${url} and has received ${nFormatter(
+        )} clics) - CoreWave`,
+        // description: `Stats page for corewave.xyz/${_key}, which redirects to ${url} and has received ${nFormatter(
+        //   clicks,
+        // )} total clicks.`,
+        description: `Página de estadísticas para corewave.xyz/${_key}, que redirige a ${url} y ha recibido ${nFormatter(
           clicks,
-        )} total clicks.`,
+        )} clics totales.`,
         image: `https://corewave.xyz/api/og/stats?key=${_key}&clicks=${clicks}`,
       }}
     >

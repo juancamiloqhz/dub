@@ -7,7 +7,8 @@ import BlurImage from "@/components/shared/blur-image";
 import { UserProps } from "@/lib/types";
 import { fetcher, timeAgo } from "@/lib/utils";
 
-const tabs = ["Members", "Invitations"];
+// const tabs = ["Members", "Invitations"];
+const tabs = ["Miembros", "Invitaciones"];
 
 export default function ProjectSettingsPeople() {
   const { setShowInviteTeammateModal, InviteTeammateModal } =
@@ -15,11 +16,11 @@ export default function ProjectSettingsPeople() {
 
   const router = useRouter();
   const { slug } = router.query as { slug?: string };
-  const [currentTab, setCurrentTab] = useState("Members");
+  const [currentTab, setCurrentTab] = useState("Miembros");
 
   const { data: users } = useSWR<UserProps[]>(
     slug &&
-      (currentTab === "Members"
+      (currentTab === "Miembros"
         ? `/api/projects/${slug}/users`
         : `/api/projects/${slug}/invite`),
     fetcher,
@@ -31,16 +32,21 @@ export default function ProjectSettingsPeople() {
       <div className="rounded-lg border border-gray-200 bg-white">
         <div className="flex flex-col items-center justify-between space-y-3 p-5 sm:flex-row sm:space-y-0 sm:p-10">
           <div className="flex flex-col space-y-3">
-            <h2 className="text-xl font-medium">People</h2>
+            <h2 className="text-xl font-medium">
+              Miembros
+              {/* People */}
+            </h2>
             <p className="text-sm text-gray-500">
-              Teammates or friends that have access to this project.
+              Colaboradores o amigos que tienen acceso a este proyecto.
+              {/* Teammates or friends that have access to this project. */}
             </p>
           </div>
           <button
             onClick={() => setShowInviteTeammateModal(true)}
             className="h-9 w-full rounded-md border border-black bg-black px-6 text-sm text-white transition-all duration-150 ease-in-out hover:bg-white hover:text-black focus:outline-none sm:w-auto"
           >
-            Invite
+            Invitar
+            {/* Invite */}
           </button>
         </div>
         <div className="flex space-x-3 border-b border-gray-200 px-3 sm:px-7">
@@ -82,8 +88,11 @@ export default function ProjectSettingsPeople() {
                     </div>
                   </div>
                   <p className="text-xs text-gray-500">
-                    {currentTab === "Members" ? "Joined " : "Invited "}
-                    {timeAgo(joinedAt)}
+                    {currentTab === "Miembros" ? "Se unió" : "Invitado"}
+                    {" hace "}
+                    {timeAgo(joinedAt, true)}
+                    {/* {currentTab === "Members" ? "Joined " : "Invited "}
+                    {timeAgo(joinedAt)} */}
                   </p>
                 </div>
               ))
@@ -96,7 +105,10 @@ export default function ProjectSettingsPeople() {
                   height={300}
                   className="pointer-events-none -my-8"
                 />
-                <p className="text-sm text-gray-500">No invitations sent</p>
+                <p className="text-sm text-gray-500">
+                  {/* No invitations sent */}
+                  No hay invitaciones enviadas
+                </p>
               </div>
             )
           ) : (

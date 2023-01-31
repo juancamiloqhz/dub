@@ -59,7 +59,8 @@ export default function Preview({
         <div className="flex h-[250px] w-full flex-col items-center justify-center space-y-4 border-b border-gray-300 bg-gray-100">
           <Photo className="h-8 w-8 text-gray-400" />
           <p className="text-sm text-gray-400">
-            Enter a link to generate a preview.
+            Ingresa un enlace para generar una vista previa.
+            {/* Enter a link to generate a preview. */}
           </p>
         </div>
       );
@@ -69,7 +70,10 @@ export default function Preview({
   return (
     <div>
       <div className="z-10 flex items-center justify-center border-b border-gray-200 bg-white px-5 py-10 sm:sticky sm:top-0">
-        <h2 className="text-lg font-medium">Social Previews</h2>
+        <h2 className="text-lg font-medium">
+          Vista Previa de Redes Sociales
+          {/* Social Previews */}
+        </h2>
       </div>
       <div className="grid gap-5 p-5">
         {/* Twitter */}

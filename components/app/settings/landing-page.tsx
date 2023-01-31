@@ -53,10 +53,15 @@ export default function LandingPage() {
       className="rounded-lg border border-gray-200 bg-white"
     >
       <div className="relative flex flex-col space-y-3 p-5 sm:p-10">
-        <h2 className="text-xl font-medium">Landing Page</h2>
+        <h2 className="text-xl font-medium">
+          Página de Destino
+          {/* Landing Page */}
+        </h2>
         <div className="flex items-center space-x-1">
           <p className="text-sm text-gray-500">
-            Configure a page to redirect visitors when they land on{" "}
+            Configura una página para redirigir a los visitantes cuando lleguen
+            a{" "}
+            {/* Configure a page to redirect visitors when they land on{" "} */}
             <a
               href={`https://${domain}`}
               target="_blank"
@@ -84,12 +89,13 @@ export default function LandingPage() {
           )}
         </div>
         <div />
-        {plan !== "Free" ? (
+        {/* {plan !== "Free" ? ( */}
+        {plan !== "Gratuito" ? (
           <input
             type="url"
             name="root"
             id="root"
-            placeholder="https://yourdomain.com"
+            placeholder="https://tudominio.com"
             required
             defaultValue={rootDomain}
             className="w-full max-w-md rounded-md border border-gray-300 text-sm text-gray-900 placeholder-gray-300 focus:border-gray-500 focus:outline-none focus:ring-gray-500"
@@ -98,18 +104,24 @@ export default function LandingPage() {
           <Tooltip
             content={
               <TooltipContent
-                title={`You can't configure a custom landing page on a free plan. ${
+                // title={`You can't configure a custom landing page on a free plan. ${
+                //   isOwner
+                //     ? "Upgrade to a Pro plan to proceed."
+                //     : "Ask your project owner to upgrade to a Pro plan."
+                // }`}
+                title={`No puedes configurar una página de destino en un plan gratuito. ${
                   isOwner
-                    ? "Upgrade to a Pro plan to proceed."
-                    : "Ask your project owner to upgrade to a Pro plan."
+                    ? "Actualiza a un plan Pro para continuar."
+                    : "Pide al propietario del proyecto que actualice a un plan Pro."
                 }`}
-                cta={isOwner && "Upgrade to Pro"}
+                cta={isOwner && "Actualizar a Pro"}
+                // cta={isOwner && "Upgrade to Pro"}
                 ctaLink={isOwner && "/settings"}
               />
             }
           >
             <div className="w-full max-w-md cursor-not-allowed rounded-md border border-gray-300 px-3 py-2 text-left text-sm text-gray-300">
-              https://yourdomain.com
+              https://tudominio.com
             </div>
           </Tooltip>
         )}
@@ -118,7 +130,8 @@ export default function LandingPage() {
       <div className="border-b border-gray-200" />
 
       <div className="px-5 py-4 sm:flex sm:items-center sm:justify-end sm:px-10">
-        {plan !== "Free" ? (
+        {/* {plan !== "Free" ? ( */}
+        {plan !== "Gratuito" ? (
           <button
             disabled={saving}
             className={`${
@@ -127,25 +140,33 @@ export default function LandingPage() {
                 : "border-black bg-black hover:bg-white hover:text-black"
             } h-9 w-full rounded-md border text-sm text-white transition-all duration-150 ease-in-out focus:outline-none sm:w-32`}
           >
-            {saving ? <LoadingDots /> : "Save Changes"}
+            {saving ? <LoadingDots /> : "Guardar Cambios"}
+            {/* {saving ? <LoadingDots /> : "Save Changes"} */}
           </button>
         ) : (
           <Tooltip
             content={
               <TooltipContent
-                title={`You can't configure a custom landing page on a free plan. ${
+                // title={`You can't configure a custom landing page on a free plan. ${
+                //   isOwner
+                //     ? "Upgrade to a Pro plan to proceed."
+                //     : "Ask your project owner to upgrade to a Pro plan."
+                // }`}
+                // cta={isOwner && "Upgrade to Pro"}
+                title={`No puedes configurar una página de destino en un plan gratuito. ${
                   isOwner
-                    ? "Upgrade to a Pro plan to proceed."
-                    : "Ask your project owner to upgrade to a Pro plan."
+                    ? "Actualiza a un plan Pro para continuar."
+                    : "Pide al propietario del proyecto que actualice a un plan Pro."
                 }`}
-                cta={isOwner && "Upgrade to Pro"}
+                cta={isOwner && "Actualizar a Pro"}
                 ctaLink={isOwner && "/settings"}
               />
             }
             fullWidth
           >
             <div className="flex h-9 w-full cursor-not-allowed items-center justify-center rounded-md border border-gray-200 bg-gray-100 text-sm text-gray-300 sm:w-32">
-              Save Changes
+              {/* Save Changes */}
+              Guardar Cambios
             </div>
           </Tooltip>
         )}

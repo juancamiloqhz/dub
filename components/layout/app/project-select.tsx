@@ -141,7 +141,8 @@ function ProjectList({
           ) : null}
         </button>
       ))}
-      {!(plan === "Free" && projects.length >= 5) && (
+      {!(plan === "Gratuito" && projects.length >= 5) && (
+        // {!(plan === "Free" && projects.length >= 5) && (
         <button
           key="add"
           onClick={() => setShowAddProjectModal(true)}

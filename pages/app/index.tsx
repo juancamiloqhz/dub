@@ -26,7 +26,8 @@ export default function App() {
               Mis Proyectos
               {/* My Projects */}
             </h1>
-            {plan === "Free" && data?.length >= FREE_PLAN_PROJECT_LIMIT ? (
+            {/* {plan === "Free" && data?.length >= FREE_PLAN_PROJECT_LIMIT ? ( */}
+            {plan === "Gratuito" && data?.length >= FREE_PLAN_PROJECT_LIMIT ? (
               <Tooltip
                 content={
                   <TooltipContent
@@ -39,7 +40,7 @@ export default function App() {
                 }
               >
                 <div className="cursor-not-allowed rounded-md border border-gray-200 px-5 py-2 text-sm font-medium text-gray-300 transition-all duration-75">
-                  Nuevo
+                  Nuevo proyecto
                   {/* Add */}
                 </div>
               </Tooltip>
@@ -48,7 +49,7 @@ export default function App() {
                 onClick={() => setShowAddProjectModal(true)}
                 className="rounded-md border border-black bg-black px-5 py-2 text-sm font-medium text-white transition-all duration-75 hover:bg-white hover:text-black active:scale-95"
               >
-                Nuevo
+                Nuevo proyecto
                 {/* Add */}
               </button>
             )}

@@ -58,10 +58,16 @@ function EditDomainModal({
             width={20}
             height={20}
           />
-          <h3 className="text-lg font-medium">Change Domain</h3>
+          <h3 className="text-lg font-medium">
+            {/* Change Domain */}
+            Cambiar Dominio
+          </h3>
           <p className="text-center text-sm text-gray-500">
-            Warning: Changing your project's domain will break all existing
-            short links and reset their analytics.
+            Advertencia: Cambiar el dominio de su proyecto romperá todos los
+            enlaces cortos existentes y restablecerá las estadísticas de los
+            mismos.
+            {/* Warning: Changing your project's domain will break all existing
+            short links and reset their analytics. */}
           </p>
         </div>
 
@@ -86,7 +92,8 @@ function EditDomainModal({
                   setDomainError(domainErrorResponse);
                 }
               } else if (res.status === 400) {
-                setDomainError("Domain is already in use.");
+                // setDomainError("Domain is already in use.");
+                setDomainError("El dominio ya está en uso.");
               }
             });
           }}
@@ -97,7 +104,8 @@ function EditDomainModal({
               htmlFor="old-domain"
               className="block text-sm font-medium text-gray-700"
             >
-              Old Domain
+              {/* Old Domain */}
+              Dominio Antiguo
             </label>
             <div className="relative mt-1 rounded-md shadow-sm">
               <input
@@ -117,7 +125,8 @@ function EditDomainModal({
               htmlFor="new-domain"
               className="block text-sm font-medium text-gray-700"
             >
-              New Domain
+              {/* New Domain */}
+              Nuevo Dominio
             </label>
             <div className="relative mt-1 rounded-md shadow-sm">
               <input
@@ -132,7 +141,8 @@ function EditDomainModal({
                     ? "border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 focus:ring-red-500"
                     : "border-gray-300 text-gray-900 placeholder-gray-300 focus:border-gray-500 focus:ring-gray-500"
                 } block w-full rounded-md pr-10 focus:outline-none sm:text-sm`}
-                placeholder="newdomain.com"
+                // placeholder="newdomain.com"
+                placeholder="nuevodominio.com"
                 value={newDomain}
                 onChange={(e) => {
                   setDomainError(null);
@@ -153,14 +163,18 @@ function EditDomainModal({
             {domainError &&
               (domainError === "Domain is already in use." ? (
                 <p className="mt-2 text-sm text-red-600" id="domain-error">
-                  Domain is already in use.{" "}
+                  {/* Domain is already in use.{" "} */}
+                  El dominio ya está en uso.{" "}
                   <a
                     className="underline"
-                    href="mailto:info@corewave.xyz?subject=My Domain Is Already In Use"
+                    // href="mailto:info@corewave.xyz?subject=My Domain Is Already In Use"
+                    href="mailto:info@corewave.xyz?subject=Mi Dominio Ya Está En Uso"
                   >
-                    Contact us
+                    {/* Contact us */}
+                    Contáctanos
                   </a>{" "}
-                  if you'd like to use this domain for your project.
+                  {/* if you'd like to use this domain for your project. */}
+                  si deseas usar este dominio para tu proyecto.
                 </p>
               ) : (
                 <p className="mt-2 text-sm text-red-600" id="domain-error">
@@ -174,19 +188,24 @@ function EditDomainModal({
               htmlFor="verification"
               className="block text-sm text-gray-700"
             >
-              To verify, type{" "}
+              {/* To verify, type{" "} */}
+              Para verificar, escribe{" "}
               <span className="font-semibold text-red-600">
-                yes, change my domain
+                {/* yes, change my domain */}
+                cambia mi dominio
               </span>{" "}
-              below
+              {/* below */}
+              abajo
             </label>
             <div className="relative mt-1 rounded-md shadow-sm">
               <input
                 type="text"
                 name="verification"
                 id="verification"
-                pattern="yes, change my domain"
-                placeholder="yes, change my domain"
+                // pattern="yes, change my domain"
+                pattern="cambia mi dominio"
+                // placeholder="yes, change my domain"
+                placeholder="cambia mi dominio"
                 required
                 autoFocus={false}
                 className="block w-full rounded-md border-gray-300 pr-10 text-gray-900 placeholder-gray-300 focus:border-gray-500 focus:outline-none focus:ring-gray-500 sm:text-sm"
@@ -205,7 +224,8 @@ function EditDomainModal({
             {saving ? (
               <LoadingDots color="#808080" />
             ) : (
-              <p>Confirm domain change</p>
+              // <p>Confirm domain change</p>
+              <p>Cambiar dominio</p>
             )}
           </button>
         </form>

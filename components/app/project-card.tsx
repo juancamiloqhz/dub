@@ -40,7 +40,10 @@ export default function ProjectCard({
             <div className="flex items-center">
               <p className="text-gray-500">{domain}</p>
               {domainVerified ? (
-                <Tooltip content="Verified domain">
+                <Tooltip
+                  // content="Verified domain"
+                  content="Dominio verificado"
+                >
                   <div className="flex w-8 justify-center">
                     <CheckCircleFill className="h-5 w-5 text-blue-500" />
                   </div>
@@ -49,9 +52,11 @@ export default function ProjectCard({
                 <Tooltip
                   content={
                     <TooltipContent
-                      title="This domain is not correctly configured. Please configure your domain to
-                  start adding links."
-                      cta="Configure Domain"
+                      //     title="This domain is not correctly configured. Please configure your domain to
+                      // start adding links."
+                      title="Este dominio no está configurado correctamente. Por favor, configura tu dominio para comenzar a agregar enlaces."
+                      // cta="Configure Domain"
+                      cta="Configurar dominio"
                       ctaLink={`/${slug}/settings`}
                     />
                   }

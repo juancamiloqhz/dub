@@ -41,10 +41,15 @@ function InviteTeammateModal({
             width={20}
             height={20}
           />
-          <h3 className="text-lg font-medium">Invite Teammate</h3>
+          <h3 className="text-lg font-medium">
+            Invitar Miembro
+            {/* Invite Teammate */}
+          </h3>
           <p className="text-center text-sm text-gray-500">
-            Invite a teammate to join your project. Invitations will be valid
-            for 7 days.
+            Invita un nuevo miembro a tu proyecto. Las invitaciones serán
+            válidas por 7 días.
+            {/* Invite a teammate to join your project. Invitations will be valid
+            for 7 days. */}
           </p>
         </div>
 
@@ -59,7 +64,8 @@ function InviteTeammateModal({
             }).then(async (res) => {
               if (res.status === 200) {
                 setState("invited");
-                toast.success("Invitation sent!");
+                toast.success("Invitación enviada!");
+                // toast.success("Invitation sent!");
                 mutate(`/api/projects/${slug}/invite`);
                 setShowInviteTeammateModal(false);
               } else {
@@ -73,14 +79,16 @@ function InviteTeammateModal({
         >
           <div>
             <label htmlFor="email" className="block text-sm text-gray-700">
-              Email
+              Correo Electrónico
+              {/* Email */}
             </label>
             <div className="relative mt-1 rounded-md shadow-sm">
               <input
                 type="email"
                 name="email"
                 id="email"
-                placeholder="panic@thedis.co"
+                placeholder="juan@corewave.xyz"
+                // placeholder="panic@thedis.co"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -100,7 +108,8 @@ function InviteTeammateModal({
             {state === "inviting" ? (
               <LoadingDots color="#808080" />
             ) : (
-              <p>Send invite</p>
+              // <p>Send invite</p>
+              <p>Enviar invitación</p>
             )}
           </button>
           {error && <p className="text-center text-xs text-red-500">{error}</p>}

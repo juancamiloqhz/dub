@@ -109,8 +109,10 @@ export default function LinkCard({ props }: { props: LinkProps }) {
                 <Tooltip
                   content={
                     <TooltipContent
-                      title="Your branded links won't work until you verify your domain."
-                      cta="Verify your domain"
+                      title="Tus enlaces personalizados no funcionarán hasta que verifiques tu dominio."
+                      // title="Your branded links won't work until you verify your domain."
+                      cta="Verifica tu dominio"
+                      // cta="Verify your domain"
                       ctaLink={`/${slug}/settings`}
                     />
                   }
@@ -154,7 +156,10 @@ export default function LinkCard({ props }: { props: LinkProps }) {
                 onClick={() => setShowLinkQRModal(true)}
                 className="group rounded-full bg-gray-100 p-1.5 transition-all duration-75 hover:scale-105 hover:bg-blue-100 active:scale-95"
               >
-                <span className="sr-only">Download QR</span>
+                <span className="sr-only">
+                  Descargar código QR
+                  {/* Download QR */}
+                </span>
                 <QR className="text-gray-700 transition-all group-hover:text-blue-800" />
               </button>
               <Link
@@ -164,7 +169,10 @@ export default function LinkCard({ props }: { props: LinkProps }) {
                 <Chart className="h-4 w-4" />
                 <p className="whitespace-nowrap text-sm text-gray-500">
                   {nFormatter(clicks)}
-                  <span className="ml-1 hidden sm:inline-block">clicks</span>
+                  <span className="ml-1 hidden sm:inline-block">
+                    clics
+                    {/* clicks */}
+                  </span>
                 </p>
               </Link>
             </div>
@@ -176,7 +184,8 @@ export default function LinkCard({ props }: { props: LinkProps }) {
 
         <div className="flex items-center">
           <p className="mr-3 hidden whitespace-nowrap text-sm text-gray-500 sm:block">
-            Added {timeAgo(createdAt)}
+            Creado hace {timeAgo(createdAt, true)}
+            {/* Added {timeAgo(createdAt)} */}
           </p>
           <p className="mr-1 whitespace-nowrap text-sm text-gray-500 sm:hidden">
             {timeAgo(createdAt, true)}
@@ -190,17 +199,24 @@ export default function LinkCard({ props }: { props: LinkProps }) {
                       <TooltipContent
                         title={
                           isOwner
-                            ? "You have exceeded your usage limit. We're still collecting data on your existing links, but you need to upgrade to edit them."
-                            : "The owner of this project has exceeded their usage limit. We're still collecting data on all existing links, but they need to upgrade their plan to edit them."
+                            ? "Has excedido tu límite de uso. Todavía estamos recopilando datos sobre tus enlaces existentes, pero necesitas actualizar tu plan para editarlos."
+                            : "El propietario de este proyecto ha excedido su límite de uso. Todavía estamos recopilando datos sobre todos los enlaces existentes, pero necesitan actualizar su plan para editarlos."
                         }
-                        cta={isOwner && "Upgrade"}
+                        // title={
+                        //   isOwner
+                        //     ? "You have exceeded your usage limit. We're still collecting data on your existing links, but you need to upgrade to edit them."
+                        //     : "The owner of this project has exceeded their usage limit. We're still collecting data on all existing links, but they need to upgrade their plan to edit them."
+                        // }
+                        cta={isOwner && "Mejora tu plan"}
+                        // cta={isOwner && "Upgrade"}
                         ctaLink={isOwner && "/settings"}
                       />
                     }
                   >
                     <div className="w-full cursor-not-allowed p-2 text-left text-sm font-medium text-gray-300 transition-all duration-75">
                       <IconMenu
-                        text="Edit"
+                        text="Editar"
+                        // text="Edit"
                         icon={<Edit className="h-4 w-4" />}
                       />
                     </div>
@@ -213,7 +229,11 @@ export default function LinkCard({ props }: { props: LinkProps }) {
                     }}
                     className="w-full rounded-md p-2 text-left text-sm font-medium text-gray-500 transition-all duration-75 hover:bg-gray-100"
                   >
-                    <IconMenu text="Edit" icon={<Edit className="h-4 w-4" />} />
+                    <IconMenu
+                      text="Editar"
+                      // text="Edit"
+                      icon={<Edit className="h-4 w-4" />}
+                    />
                   </button>
                 )}
                 <button
@@ -225,7 +245,8 @@ export default function LinkCard({ props }: { props: LinkProps }) {
                   className="w-full rounded-md p-2 text-left text-sm font-medium text-gray-500 transition-all duration-75 hover:bg-gray-100"
                 >
                   <IconMenu
-                    text={archived ? "Unarchive" : "Archive"}
+                    text={archived ? "Desarchivar" : "Archivar"}
+                    // text={archived ? "Unarchive" : "Archive"}
                     icon={<Archive className="h-4 w-4" />}
                   />
                 </button>
@@ -237,7 +258,8 @@ export default function LinkCard({ props }: { props: LinkProps }) {
                   className="w-full rounded-md p-2 text-left text-sm font-medium text-red-600 transition-all duration-75 hover:bg-red-600 hover:text-white"
                 >
                   <IconMenu
-                    text="Delete"
+                    text="Eliminar"
+                    // text="Delete"
                     icon={<Delete className="h-4 w-4" />}
                   />
                 </button>

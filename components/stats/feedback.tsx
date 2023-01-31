@@ -54,7 +54,10 @@ export default function Feedback() {
   return (
     <div className="relative h-[420px] overflow-scroll border border-gray-200 bg-white px-7 py-5 scrollbar-hide sm:rounded-lg sm:border-gray-100 sm:shadow-lg">
       <div className="mb-5 flex">
-        <h1 className="text-xl font-semibold">Feedback</h1>
+        <h1 className="text-xl font-semibold">
+          {/* Feedback */}
+          Sugerencias
+        </h1>
       </div>
       <AnimatePresence>
         {state === "submitted" ? (
@@ -64,7 +67,10 @@ export default function Feedback() {
             animate={{ opacity: 1, y: 0 }}
           >
             <CheckCircleFill className="h-10 w-10 text-green-500" />
-            <p className="text-gray-500">Thank you for your feedback!</p>
+            <p className="text-gray-500">
+              {/* Thank you for your feedback! */}
+              ¡Gracias por tus sugerencias!
+            </p>
           </motion.div>
         ) : (
           <motion.form
@@ -78,12 +84,14 @@ export default function Feedback() {
                 htmlFor="email"
                 className="mb-2 block text-xs font-medium text-gray-500"
               >
-                EMAIL
+                {/* EMAIL */}
+                CORREO ELECTRÓNICO
               </label>
               <input
                 name="email"
                 type="email"
-                placeholder="panic@thedis.co"
+                // placeholder="panic@thedis.co"
+                placeholder="juan@corewave.xyz"
                 autoComplete="email"
                 onFocus={prewarm}
                 onChange={(e) => setData({ ...data, email: e.target.value })}
@@ -95,7 +103,8 @@ export default function Feedback() {
                 htmlFor="feedback"
                 className="mb-2 block text-xs font-medium text-gray-500"
               >
-                FEEDBACK
+                {/* FEEDBACK */}
+                SUGERENCIAS
               </label>
               <textarea
                 name="feedback"
@@ -104,7 +113,8 @@ export default function Feedback() {
                 rows={6}
                 onKeyDown={handleKeyDown}
                 className="block w-full rounded-md border-gray-300 pr-10 text-gray-900 placeholder-gray-300 focus:border-gray-500 focus:outline-none focus:ring-gray-500 sm:text-sm"
-                placeholder="What other data would you like to see?"
+                // placeholder="What other data would you like to see?"
+                placeholder="¿Qué otro tipo de datos te gustaría ver?"
                 value={data.feedback}
                 onFocus={prewarm}
                 onChange={(e) => setData({ ...data, feedback: e.target.value })}
@@ -122,7 +132,8 @@ export default function Feedback() {
               {state === "submitting" ? (
                 <LoadingDots color="#808080" />
               ) : (
-                <p>Submit feedback</p>
+                // <p>Submit feedback</p>
+                <p>Enviar sugerencias</p>
               )}
             </button>
           </motion.form>

@@ -1,5 +1,5 @@
-import { useRouter } from "next/router";
-import useSWR from "swr";
+// import { useRouter } from "next/router";
+// import useSWR from "swr";
 import Clicks from "@/components/stats/clicks";
 import Devices from "@/components/stats/devices";
 import Feedback from "@/components/stats/feedback";

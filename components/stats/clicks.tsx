@@ -43,7 +43,8 @@ export default function Clicks() {
           <Chart className="mb-1 h-6 w-6 text-gray-600" />
         </div>
         <p className="text-sm font-medium uppercase text-gray-600">
-          Total Clicks
+          {/* Total Clicks */}
+          Clics Totales
         </p>
       </div>
       <BarChart />

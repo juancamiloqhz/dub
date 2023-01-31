@@ -65,7 +65,8 @@ export default function OGSection({
     <div className="grid gap-5 border-b border-gray-200 pb-5">
       <div className="flex items-center justify-between">
         <h2 className="text-sm font-medium text-gray-900">
-          Custom Social Media Cards
+          Tarjetas de Redes Sociales Personalizadas
+          {/* Custom Social Media Cards */}
         </h2>
         <Switch
           fn={() => setData((prev) => ({ ...prev, proxy: !proxy }))}
@@ -81,10 +82,14 @@ export default function OGSection({
         >
           <div>
             <div className="flex items-center justify-between">
-              <p className="block text-sm font-medium text-gray-700">Image</p>
+              <p className="block text-sm font-medium text-gray-700">
+                Imagen
+                {/* Image */}
+              </p>
               {fileSizeTooBig && (
                 <p className="text-sm text-red-500">
-                  File size too big (max 1MB)
+                  El archivo es demasiado grande (máximo 1MB)
+                  {/* File size too big (max 1MB) */}
                 </p>
               )}
             </div>
@@ -106,15 +111,20 @@ export default function OGSection({
               >
                 <UploadCloud className="h-7 w-7 text-gray-500 transition-all duration-75 group-hover:scale-110 group-active:scale-95" />
                 <p className="mt-2 text-sm text-gray-500">
-                  Recommended: 1200 x 627 pixels
+                  Recomendado: 1200 x 627 píxeles
+                  {/* Recommended: 1200 x 627 pixels */}
                 </p>
-                <span className="sr-only">OG Image upload</span>
+                <span className="sr-only">
+                  Cargar imagen OG
+                  {/* OG Image upload */}
+                </span>
               </div>
               {image &&
                 (image.startsWith("https://res.cloudinary.com") ? (
                   <BlurImage
                     src={image}
-                    alt="Preview"
+                    alt="Vista previa"
+                    // alt="Preview"
                     width={1200}
                     height={627}
                     className="h-full w-full rounded-md object-cover"
@@ -122,7 +132,8 @@ export default function OGSection({
                 ) : (
                   <img
                     src={image}
-                    alt="Preview"
+                    alt="Vista previa"
+                    // alt="Preview"
                     className="h-full w-full rounded-md object-cover"
                   />
                 ))}
@@ -141,7 +152,10 @@ export default function OGSection({
 
           <div>
             <div className="flex items-center justify-between">
-              <p className="block text-sm font-medium text-gray-700">Title</p>
+              <p className="block text-sm font-medium text-gray-700">
+                Título
+                {/* Title */}
+              </p>
               <p className="text-sm text-gray-500">{title?.length || 0}/120</p>
             </div>
             <div className="relative mt-1 flex rounded-md shadow-sm">
@@ -156,7 +170,7 @@ export default function OGSection({
                 minRows={3}
                 maxLength={120}
                 className="block w-full rounded-md border-gray-300 pr-10 text-sm text-gray-900 placeholder-gray-300 focus:border-gray-500 focus:outline-none focus:ring-gray-500"
-                placeholder="CoreWave - Open Source Bitly Alternative"
+                placeholder="CoreWave - Enlaces cortos para equipos de marketing modernos"
                 value={title || ""}
                 onChange={(e) => {
                   setData({ ...data, title: e.target.value });
@@ -169,7 +183,8 @@ export default function OGSection({
           <div>
             <div className="flex items-center justify-between">
               <p className="block text-sm font-medium text-gray-700">
-                Description
+                Descripción
+                {/* Description */}
               </p>
               <p className="text-sm text-gray-500">
                 {description?.length || 0}/240
@@ -187,7 +202,8 @@ export default function OGSection({
                 minRows={3}
                 maxLength={240}
                 className="block w-full rounded-md border-gray-300 pr-10 text-sm text-gray-900 placeholder-gray-300 focus:border-gray-500 focus:outline-none focus:ring-gray-500"
-                placeholder="CoreWave is open-source link management tool for modern marketing teams to create, share, and track short links."
+                placeholder="CoreWave es una herramienta de administración de enlaces cortos para equipos de marketing modernos. Crea, comparte y rastrea tus enlaces."
+                // placeholder="CoreWave is open-source link management tool for modern marketing teams to create, share, and track short links."
                 value={description || ""}
                 onChange={(e) => {
                   setData({

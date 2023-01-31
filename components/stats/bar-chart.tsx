@@ -219,7 +219,8 @@ const BarChart = ({ screenWidth }: { screenWidth?: number }) => {
                   <span className="text-2xl font-semibold">
                     {nFormatter(tooltipData.clicks)}
                   </span>{" "}
-                  clicks
+                  clics
+                  {/* clicks */}
                 </h3>
                 <p className="text-xs text-gray-600">
                   {intervalData[interval].format(tooltipData.start)} -{" "}

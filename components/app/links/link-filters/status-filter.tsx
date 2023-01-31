@@ -6,17 +6,20 @@ import Popover from "@/components/shared/popover";
 
 const statuses = [
   {
-    display: "Active",
+    display: "Activo",
+    // display: "Active",
     slug: "active",
     color: "bg-green-500",
   },
   {
-    display: "Expired",
+    display: "Expirado",
+    // display: "Expired",
     slug: "expired",
     color: "bg-amber-500",
   },
   {
-    display: "Archived",
+    display: "Archivado",
+    // display: "Archived",
     slug: "archived",
     color: "bg-gray-400",
   },
@@ -107,7 +110,8 @@ export default function StatusFilter() {
       >
         <div className="flex items-center space-x-2 text-gray-700">
           <IconMenu
-            text="Status"
+            // text="Status"
+            text="Estado"
             icon={
               <div className="flex -space-x-1">
                 {statuses.map(({ slug, color }) => (

@@ -8,23 +8,28 @@ export const LOCALHOST_GEO_DATA = {
 
 export const INTERVALS = [
   {
-    display: "Last hour",
+    // display: "Last hour",
+    display: "Última hora",
     slug: "1h",
   },
   {
-    display: "Last 24 hours",
+    // display: "Last 24 hours",
+    display: "Últimas 24 horas",
     slug: "24h",
   },
   {
-    display: "Last 7 days",
+    // display: "Last 7 days",
+    display: "Últimos 7 días",
     slug: "7d",
   },
   {
-    display: "Last 30 days",
+    // display: "Last 30 days",
+    display: "Últimos 30 días",
     slug: "30d",
   },
   {
-    display: "Last 3 months",
+    // display: "Last 3 months",
+    display: "Últimos 3 meses",
     slug: "90d",
   },
 ];

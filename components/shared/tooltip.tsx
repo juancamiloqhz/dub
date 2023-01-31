@@ -156,9 +156,12 @@ export function OGImageProxy() {
         className="w-full overflow-hidden rounded-md shadow-md"
       />
       <p className="text-sm text-gray-700">
-        Add a custom OG image in front of your target URL. Bots like
+        Añade una imagen OG personalizada delante de tu URL de destino. Los bots
+        como Twitter/Facebook recibirán esta imagen, mientras que los usuarios
+        serán redirigidos a tu URL de destino.
+        {/* Add a custom OG image in front of your target URL. Bots like
         Twitter/Facebook will be served this image, while users will be
-        redirected to your target URL.
+        redirected to your target URL. */}
       </p>
     </div>
   );
@@ -179,7 +182,10 @@ export function ProTiers({ usageLimit }: { usageLimit?: number }) {
           <p className="text-2xl font-semibold text-gray-700">
             ${PRO_TIERS[tier].price.monthly.amount}
           </p>
-          <p className="text-sm text-gray-700">/mo</p>
+          <p className="text-sm text-gray-700">
+            /mes
+            {/* /mo */}
+          </p>
         </div>
       </div>
       <div className="flex w-full flex-col items-center space-y-1 border-t border-gray-200 bg-gray-50 p-5 text-center">
@@ -189,7 +195,8 @@ export function ProTiers({ usageLimit }: { usageLimit?: number }) {
           maxValue={PRO_TIERS.length - 1}
         />
         <p className="text-sm text-gray-700">
-          Up to {nFormatter(PRO_TIERS[tier].quota)} link clicks/mo
+          {/* Up to {nFormatter(PRO_TIERS[tier].quota)} link clicks/mo */}
+          Hasta {nFormatter(PRO_TIERS[tier].quota)} clics/mes
         </p>
       </div>
     </div>

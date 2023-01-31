@@ -45,18 +45,28 @@ function UpgradePlanModal({
             width={20}
             height={20}
           />
-          <h3 className="text-xl font-medium">Upgrade to Pro</h3>
+          <h3 className="text-xl font-medium">
+            Mejora tu Plan {/* Upgrade your plan */}
+            {/* Upgrade to Pro */}
+          </h3>
           <div className="flex items-center space-x-2">
-            <p className="text-sm text-gray-600">Billed Monthly</p>
+            <p className="text-sm text-gray-600">
+              Facturación Mensual
+              {/* Billed Monthly */}
+            </p>
             <Switch fn={setAnnualBilling} />
-            <p className="text-sm text-gray-600">Billed Annually</p>
+            <p className="text-sm text-gray-600">
+              Facturación Anual
+              {/* Billed Annually */}
+            </p>
           </div>
         </div>
 
         <div className="relative mx-auto -mt-[5.1rem] -mb-[5.3rem] max-w-sm rounded-lg border border-gray-200 bg-white shadow-md">
           {annualBilling && (
             <span className="absolute top-2 -right-0.5 rounded-l-md bg-gradient-to-r from-blue-600 to-cyan-600 px-2 py-0.5 text-xs text-white">
-              2 Free Months
+              2 Meses Gratis
+              {/* 2 Free Months */}
             </span>
           )}
           <div className="flex w-full max-w-md items-center justify-between p-5 pt-7">
@@ -68,7 +78,8 @@ function UpgradePlanModal({
                 ${PRO_TIERS[tier].price[period].amount}
               </p>
               <p className="text-sm text-gray-700">
-                /{annualBilling ? "yr" : "mo"}
+                {/* /{annualBilling ? "yr" : "mo"} */}/
+                {annualBilling ? "año" : "mes"}
               </p>
             </div>
           </div>
@@ -79,7 +90,8 @@ function UpgradePlanModal({
               maxValue={PRO_TIERS.length - 1}
             />
             <p className="text-sm text-gray-700">
-              Up to {nFormatter(PRO_TIERS[tier].quota)} link clicks/mo
+              Hasta {nFormatter(PRO_TIERS[tier].quota)} clics/mes
+              {/* Up to {nFormatter(PRO_TIERS[tier].quota)} link clicks/mo */}
             </p>
           </div>
         </div>
@@ -115,14 +127,19 @@ function UpgradePlanModal({
             {clicked ? (
               <LoadingDots color="#808080" />
             ) : (
-              <p>Upgrade to {PRO_TIERS[tier].name}</p>
+              <p>
+                {/* Upgrade to {PRO_TIERS[tier].name} */}
+                Mejorar a {PRO_TIERS[tier].name}
+              </p>
             )}
           </button>
           <a
-            href="mailto:info@corewave.xyz?subject=Upgrade%20to%20Enterprise%20Plan"
+            // href="mailto:info@corewave.xyz?subject=Upgrade%20to%20Enterprise%20Plan"
+            href="mailto:info@corewave.xyz?subject=Mejorar%20a%20Plan%20Empresarial"
             className="text-sm text-gray-500 transition-all hover:text-gray-700"
           >
-            Or contact us for Enterprise
+            Ó contáctanos para plan Empresarial
+            {/* Or contact us for Enterprise */}
           </a>
         </div>
       </div>

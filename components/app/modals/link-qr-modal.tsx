@@ -215,7 +215,8 @@ function AdvancedSettings({ qrData, setFgColor, setShowLogo }) {
             >
               Logo
             </label>
-            {!plan || plan === "Free" ? (
+            {/* {!plan || plan === "Free" ? ( */}
+            {!plan || plan === "Gratuito" ? (
               <Tooltip
                 content={
                   <TooltipContent

@@ -33,16 +33,19 @@ export default function Interim({
       >
         <Logo className="h-11 w-11" />
         <h1 className="font-display text-3xl font-semibold text-gray-800 transition-colors sm:text-4xl">
-          Let's get started
+          Comencemos
+          {/* Let's get started */}
         </h1>
       </motion.div>
       <motion.p
         className="text-gray-600 transition-colors sm:text-lg"
         variants={STAGGER_CHILD_VARIANTS}
       >
-        Have your own domain? Start creating branded short links for free.{" "}
-        <br className="hidden sm:block" />
-        Don't have one? Use the default{" "}
+        {/* Have your own domain? Start creating branded short links for free.{" "} */}
+        ¿Tienes tu propio dominio? Comienza a crear enlaces cortos
+        personalizados de forma gratuita. <br className="hidden sm:block" />
+        {/* Don't have one? Use the default{" "} */}
+        ¿No tienes uno? Usa{" "}
         <a
           className="text-gray-500 underline transition-colors hover:text-gray-700"
           target="_blank"
@@ -51,7 +54,8 @@ export default function Interim({
         >
           corewave.xyz
         </a>{" "}
-        domain to create short links.
+        {/* domain to create short links. */}
+        para crear tus enlaces.
       </motion.p>
       <motion.div
         variants={STAGGER_CHILD_VARIANTS}
@@ -63,12 +67,14 @@ export default function Interim({
         >
           <BlurImage
             src="/_static/illustrations/shopping-call.svg"
-            alt="No links yet"
+            // alt="No links yet"
+            alt="Sin enlaces aún"
             width={250}
             height={250}
             className="pointer-events-none -mt-8 -mb-3 w-48 sm:w-60"
           />
-          <p>I have a domain</p>
+          {/* <p>I have a domain</p> */}
+          <p>Tengo un dominio</p>
         </button>
         <button
           onClick={() => setState("link")}
@@ -76,12 +82,14 @@ export default function Interim({
         >
           <BlurImage
             src="/_static/illustrations/call-waiting.svg"
-            alt="No links yet"
+            // alt="No links yet"
+            alt="Sin enlaces aún"
             width={250}
             height={250}
             className="pointer-events-none -mt-8 -mb-3 w-48 sm:w-60"
           />
-          <p>I don't have a domain</p>
+          {/* <p>I don't have a domain</p> */}
+          <p>No tengo un dominio</p>
         </button>
       </motion.div>
     </motion.div>

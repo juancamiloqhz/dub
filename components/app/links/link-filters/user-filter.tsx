@@ -69,7 +69,8 @@ export default function UserFilter() {
         <div className="flex w-44 items-center space-x-2 text-gray-700">
           <Search className="h-4 w-4 shrink-0" />
           <p className="truncate text-sm">
-            {currentUser?.name || currentUser?.email || "All Users..."}
+            {currentUser?.name || currentUser?.email || "Todos los usuarios..."}
+            {/* {currentUser?.name || currentUser?.email || "All Users..."} */}
           </p>
         </div>
         {currentUser ? (
