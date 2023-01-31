@@ -129,21 +129,25 @@ const GlobeAnimation = ({ markers }: { markers: MarkerProps[] }) => {
               autoFocus={false}
               onClick={() => setShowModal(false)}
             >
-              <span className="sr-only">Spin Globe</span>
+              <span className="sr-only">
+                Rotar el globo
+                {/* Spin Globe */}
+              </span>
               <X className="h-4 w-4" />
             </button>
             <Drag className="mx-auto mb-2 h-12 w-12 text-gray-700 sm:mb-4" />
             <p className="text-center text-sm text-gray-700 sm:text-base">
-              This map shows the locations of the last 50 clicks on{" "}
+              Este globo muestra las ubicaciones de los últimos 50 clics en{" "}
+              {/* This map shows the locations of the last 50 clicks on{" "} */}
               <a
                 className="font-semibold text-blue-800"
-                href="https://corewave.xyz/github"
+                href="https://corewave.xyz/lanzamiento"
                 target="_blank"
                 rel="noreferrer"
               >
-                corewave.xyz/github
+                corewave.xyz/lanzamiento
               </a>{" "}
-              in real time.
+              en tiempo real. {/* in real time. */}
             </p>
             <Link
               href={{ pathname: "/", query: { key: "github" } }}
@@ -152,7 +156,8 @@ const GlobeAnimation = ({ markers }: { markers: MarkerProps[] }) => {
               scroll={false}
               className="mx-auto mt-2 block max-w-fit rounded-full border border-black bg-black px-4 py-1.5 text-sm text-white hover:bg-white hover:text-black sm:mt-4"
             >
-              View all stats
+              Ver estadísticas
+              {/* View all stats */}
             </Link>
           </motion.div>
         )}

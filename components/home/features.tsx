@@ -18,10 +18,13 @@ import { useAddEditLinkModal } from "../app/modals/add-edit-link-modal";
 const featureList = [
   {
     key: "analytics",
-    title: "Analytics that matter",
+    title: "Análisis que importan",
+    // title: "Analytics that matter",
     icon: <Chart className="h-5 w-5 text-gray-600" />,
     description:
-      "CoreWave provides powerful analytics for your links, including geolocation, device, browser, and referrer information.",
+      "CoreWave ofrece análisis poderosos para tus enlaces, incluida la geolocalización, el dispositivo, el navegador y la información del remitente.",
+    // description:
+    //   "CoreWave provides powerful analytics for your links, including geolocation, device, browser, and referrer information.",
     cta: (
       <Link
         href={{ pathname: "/", query: { key: "github" } }}
@@ -30,7 +33,8 @@ const featureList = [
         scroll={false}
         className="block max-w-fit rounded-full border border-black bg-black px-4 py-1.5 text-sm text-white transition-all hover:bg-white hover:text-black"
       >
-        View demo
+        Ver demo
+        {/* View demo */}
       </Link>
     ),
     demo: "https://d2vwwcvoksz7ty.cloudfront.net/analytics.mp4",
@@ -38,10 +42,13 @@ const featureList = [
   },
   {
     key: "domains",
-    title: "Use your own domain",
+    title: "Usa tu propio dominio",
+    // title: "Use your own domain",
     icon: <Airplay className="h-5 w-5 text-gray-600" />,
     description:
-      "CoreWave offers free custom domains on all plans - start personalizing your links today.",
+      "CoreWave ofrece dominios personalizados gratuitos en todos los planes - ¡comienza a personalizar tus enlaces ahora!",
+    // description:
+    //   "CoreWave offers free custom domains on all plans - start personalizing your links today.",
     cta: (
       <a
         href="https://app.corewave.xyz"
@@ -49,44 +56,60 @@ const featureList = [
         rel="noreferrer"
         className="block max-w-fit rounded-full border border-black bg-black px-4 py-1.5 text-sm text-white transition-all hover:bg-white hover:text-black"
       >
-        Create your project
+        Crea tu proyecto
+        {/* Create your project */}
       </a>
     ),
     demo: "https://d2vwwcvoksz7ty.cloudfront.net/custom-domain.mp4",
   },
   {
     key: "link",
-    title: "Powerful link builder",
+    title: "Poderoso generador de enlaces",
+    // title: "Powerful link builder",
     icon: <LinkIcon className="h-5 w-5 text-gray-600" />,
     description:
-      "Build your links with UTM parameters, password protection, expiration dates, iOS/Android targeting, etc.",
-    cta: "View demo", //custom cta
+      "Crea tus enlaces con parámetros UTM, protección por contraseña, fechas de vencimiento, iOS / Android targeting, etc.",
+    // description:
+    //   "Build your links with UTM parameters, password protection, expiration dates, iOS/Android targeting, etc.",
+    cta: "Ver demo", //custom cta
+    // cta: "View demo", //custom cta
     demo: "https://d2vwwcvoksz7ty.cloudfront.net/link.mp4",
   },
   {
     key: "social",
-    title: "Custom social media cards",
+    title: "Tarjetas de redes sociales personalizadas",
+    // title: "Custom social media cards",
     icon: <Photo className="h-5 w-5 text-gray-600" />,
     description:
-      "Overlay custom OG images on your links to make them stand out on social media.",
-    cta: "View demo", //custom cta
+      "Usa imágenes OG personalizadas en tus enlaces para que destaquen en las redes sociales.",
+    // description:
+    //   "Overlay custom OG images on your links to make them stand out on social media.",
+    cta: "Ver demo", //custom cta
+    // cta: "View demo", //custom cta
     demo: "https://d2vwwcvoksz7ty.cloudfront.net/og.mp4",
   },
   {
     key: "qr",
-    title: "Free QR code generator",
+    title: "Generador de códigos QR gratuito",
+    // title: "Free QR code generator",
     icon: <QR className="h-5 w-5 text-gray-600" />,
     description:
-      "QR codes and short links are like peas in a pod. That's why we've built a QR code generator right into CoreWave.",
-    cta: "View demo", //custom cta
+      "Los códigos QR y los enlaces cortos son como dos gotas de agua. Por eso hemos construido un generador de códigos QR directamente en CoreWave.",
+    // description:
+    //   "QR codes and short links are like peas in a pod. That's why we've built a QR code generator right into CoreWave.",
+    cta: "Ver demo", //custom cta
+    // cta: "View demo", //custom cta
     demo: "https://d2vwwcvoksz7ty.cloudfront.net/qr.mp4",
   },
   {
     key: "team",
-    title: "Collaborate with your team",
+    title: "Colabora con tu equipo",
+    // title: "Collaborate with your team",
     icon: <Users className="h-5 w-5 text-gray-600" />,
     description:
-      "With CoreWave, you can invite unlimited team members to collaborate on your project for free - no more sharing logins via Google groups.",
+      "Con CoreWave, puedes invitar a miembros ilimitados de tu equipo para colaborar en tu proyecto de forma gratuita - ¡no más compartir inicios de sesión a través de grupos de Google!",
+    // description:
+    //   "With CoreWave, you can invite unlimited team members to collaborate on your project for free - no more sharing logins via Google groups.",
     cta: (
       <a
         href="https://app.corewave.xyz"
@@ -94,7 +117,8 @@ const featureList = [
         rel="noreferrer"
         className="block max-w-fit rounded-full border border-black bg-black px-4 py-1.5 text-sm text-white transition-all hover:bg-white hover:text-black"
       >
-        Invite your teammates
+        Invita a tu equipo
+        {/* Invite your teammates */}
       </a>
     ),
     demo: "https://d2vwwcvoksz7ty.cloudfront.net/team.mp4",
@@ -123,20 +147,26 @@ export default function Features() {
         <link key={key} rel="preload" as="video" href={demo} />
       ))}
       <MaxWidthWrapper className="py-10">
-        <div className="mx-auto max-w-md text-center sm:max-w-xl">
+        <div className="mx-auto max-w-md text-center sm:max-w-2xl">
           <h2 className="font-display text-4xl font-extrabold leading-tight text-black sm:text-5xl sm:leading-tight">
             <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              Powerful
+              Poderosas
+              {/* Powerful */}
             </span>{" "}
-            features for{" "}
+            características para {/* features for{" "} */}
             <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              modern
+              equipos de marketing
+              {/* modern */}
             </span>{" "}
-            marketing teams
+            modernos
+            {/* marketing teams */}
           </h2>
           <p className="mt-5 text-gray-600 sm:text-lg">
-            CoreWave is more than just a link shortener. We've built a suite of
-            powerful features that gives you marketing superpowers.
+            CoreWave es más que un acortador de enlaces. Hemos construido una
+            suite de características poderosas que te da superpoderes de
+            marketing.
+            {/* CoreWave is more than just a link shortener. We've built a suite of
+            powerful features that gives you marketing superpowers. */}
           </p>
         </div>
 
@@ -148,7 +178,7 @@ export default function Features() {
                   trigger: (
                     <div className="flex items-center space-x-3 p-3">
                       {icon}
-                      <h3 className="text-base font-semibold text-gray-600">
+                      <h3 className="text-left text-base font-semibold text-gray-600">
                         {title}
                       </h3>
                     </div>
@@ -163,14 +193,16 @@ export default function Features() {
                           onClick={() => setShowAddEditLinkModal(true)}
                           className="block max-w-fit rounded-full border border-black bg-black px-4 py-1.5 text-sm text-white transition-all hover:bg-white hover:text-black"
                         >
-                          View demo
+                          Ver demo
+                          {/* View demo */}
                         </button>
                       ) : key === "qr" ? (
                         <button
                           onClick={() => setShowLinkQRModal(true)}
                           className="block max-w-fit rounded-full border border-black bg-black px-4 py-1.5 text-sm text-white transition-all hover:bg-white hover:text-black"
                         >
-                          View demo
+                          Ver demo
+                          {/* View demo */}
                         </button>
                       ) : (
                         cta
@@ -214,7 +246,8 @@ export default function Features() {
                           poster={feature.thumbnail}
                         >
                           <source src={feature.demo} type="video/mp4" />
-                          Your browser does not support the video tag.
+                          Tu navegador no soporta el elemento video.
+                          {/* Your browser does not support the video tag. */}
                         </video>
                       </motion.div>
                     );

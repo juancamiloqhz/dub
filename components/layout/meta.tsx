@@ -2,8 +2,10 @@ import Head from "next/head";
 import { FAVICON_FOLDER } from "@/lib/constants";
 
 export default function Meta({
-  title = "CoreWave - Link Management for Modern Marketing Teams",
-  description = "CoreWave is an open-source link management tool for modern marketing teams to create, share, and track short links.",
+  title = "CoreWave - Gestión de enlaces para equipos de marketing modernos",
+  // title = "CoreWave - Link Management for Modern Marketing Teams",
+  description = "CoreWave es una herramienta de gestión de enlaces para equipos de marketing modernos. Crea, comparte y rastrea tus enlaces.",
+  // description = "CoreWave is an open-source link management tool for modern marketing teams to create, share, and track short links.",
   image = "https://corewave.xyz/_static/thumbnail.png",
 }: {
   title?: string;
@@ -56,7 +58,8 @@ export default function Meta({
       <meta name="twitter:creator" content="@juancamiloqhz" />
       <meta
         name="twitter:title"
-        content="CoreWave - Open-Source Bitly Alternative"
+        content="CoreWave - Gestión de enlaces para equipos de marketing modernos"
+        // content="CoreWave - Open-Source Bitly Alternative"
       />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />

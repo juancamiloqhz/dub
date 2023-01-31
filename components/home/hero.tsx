@@ -29,7 +29,7 @@ const Hero = () => {
       </h1>
       <h2 className="mt-5 text-lg text-gray-600 sm:text-xl">
         CoreWave es una herramienta de administración de enlaces para equipos de
-        marketing modernos. <br /> Crea, comparte y rastrea enlaces cortos.
+        marketing modernos. <br /> Crea, comparte y rastrea tus enlaces.
         {/* CoreWave is an open-source link management tool for modern marketing
         teams to create, share, and track short links. */}
       </h2>

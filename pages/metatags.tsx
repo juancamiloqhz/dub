@@ -38,9 +38,12 @@ export default function Metatags({ tweets }: { tweets: any }) {
   return (
     <HomeLayout
       meta={{
-        title: "Metatags API - The Free API to Get Meta Tags from a URL",
+        title: "Metatags API - Obtén gratis los Meta Tags de una URL",
+        // title: "Metatags API - The Free API to Get Meta Tags from a URL",
         description:
-          "CoreWave's Metatags API is a free & simple API to retrieve meta & OG tags from a URL, powered by Vercel Edge Functions.",
+          "El API gratuito de Metatags de CoreWave te permite obtener los meta tags de una URL.",
+        // description:
+        //   "CoreWave's Metatags API is a free & simple API to retrieve meta & OG tags from a URL, powered by Vercel Edge Functions.",
       }}
     >
       <Background />
@@ -53,7 +56,8 @@ export default function Metatags({ tweets }: { tweets: any }) {
         >
           <Twitter className="h-5 w-5 text-[#1d9bf0]" />
           <p className="text-sm font-semibold text-[#1d9bf0]">
-            Watch it in action
+            Míralo en acción
+            {/* Watch it in action */}
           </p>
         </a>
 
@@ -64,8 +68,9 @@ export default function Metatags({ tweets }: { tweets: any }) {
           API
         </h1>
         <h2 className="text-lg text-gray-600 sm:text-xl">
-          A dead-simple API to retrieve the meta tags for a URL. Completely free
-          and open-source.
+          Obtén gratis los Meta Tags de una URL.
+          {/* A dead-simple API to retrieve the meta tags for a URL. Completely free
+          and open-source. */}
         </h2>
 
         <div className="w-full rounded-md shadow-sm">
@@ -97,7 +102,8 @@ export default function Metatags({ tweets }: { tweets: any }) {
             <div className="flex h-[250px] w-full flex-col items-center justify-center space-y-4 border-b border-gray-300">
               <Photo className="h-8 w-8 text-gray-400" />
               <p className="text-sm text-gray-400">
-                Enter a link to generate a preview.
+                Ingresa una URL para generar una vista previa.
+                {/* Enter a link to generate a preview. */}
               </p>
             </div>
           )}
@@ -175,7 +181,8 @@ export default function Metatags({ tweets }: { tweets: any }) {
           className="mx-auto mt-2 flex items-center justify-center space-x-2 text-sm text-gray-500 transition-all hover:text-black"
         >
           <Github className="h-4 w-4" />
-          <p>View the source code</p>
+          <p>Ver el código fuente</p>
+          {/* <p>View the source code</p> */}
         </a>
 
         <div className="text-left">

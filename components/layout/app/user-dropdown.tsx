@@ -18,7 +18,11 @@ export default function UserDropdown() {
               className="relative w-full rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100"
               onClick={() => signOut()}
             >
-              <IconMenu text="Logout" icon={<Logout className="h-4 w-4" />} />
+              {/* <IconMenu text="Logout" icon={<Logout className="h-4 w-4" />} /> */}
+              <IconMenu
+                text="Cerrar sesión"
+                icon={<Logout className="h-4 w-4" />}
+              />
             </button>
           </div>
         }
@@ -32,7 +36,8 @@ export default function UserDropdown() {
         >
           {session && (
             <Image
-              alt={session?.user?.email || "Avatar for logged in user"}
+              alt={session?.user?.email || "Avatar del usuario conectado"}
+              // alt={session?.user?.email || "Avatar for logged in user"}
               src={
                 session?.user?.image ||
                 `https://avatars.dicebear.com/api/micah/${session?.user?.email}.svg`

@@ -97,7 +97,10 @@ function AddProjectModalHelper({
             width={20}
             height={20}
           />
-          <h3 className="text-lg font-medium">Add a new project</h3>
+          <h3 className="text-lg font-medium">
+            Crear nuevo proyecto
+            {/* Add a new project */}
+          </h3>
         </div>
 
         <form
@@ -138,7 +141,8 @@ function AddProjectModalHelper({
               htmlFor="name"
               className="block text-sm font-medium text-gray-700"
             >
-              Project Name
+              Nombre del proyecto
+              {/* Project Name */}
             </label>
             <div className="mt-1 flex rounded-md shadow-sm">
               <input
@@ -162,7 +166,8 @@ function AddProjectModalHelper({
               htmlFor="slug"
               className="block text-sm font-medium text-gray-700"
             >
-              Project Slug
+              Slug del proyecto
+              {/* Project Slug */}
             </label>
             <div className="relative mt-1 flex rounded-md shadow-sm">
               <span className="inline-flex items-center rounded-l-md border border-r-0 border-gray-300 bg-gray-50 px-5 text-gray-500 sm:text-sm">
@@ -179,7 +184,7 @@ function AddProjectModalHelper({
                     ? "border-red-300 text-red-900 placeholder-red-300 focus:border-red-500 focus:ring-red-500"
                     : "border-gray-300 text-gray-900 placeholder-gray-300 focus:border-gray-500 focus:ring-gray-500"
                 } block w-full rounded-r-md pr-10 focus:outline-none sm:text-sm`}
-                placeholder="dub"
+                placeholder="corewave"
                 value={slug}
                 onChange={(e) => {
                   setSlugError(null);
@@ -208,7 +213,8 @@ function AddProjectModalHelper({
               htmlFor="domain"
               className="block text-sm font-medium text-gray-700"
             >
-              Shortlink Domain
+              Dominio del proyecto
+              {/* Shortlink Domain */}
             </label>
             <div className="relative mt-1 flex rounded-md shadow-sm">
               <input
@@ -242,14 +248,18 @@ function AddProjectModalHelper({
             {domainError &&
               (domainError === "Domain is already in use." ? (
                 <p className="mt-2 text-sm text-red-600" id="domain-error">
-                  Domain is already in use.{" "}
+                  Este dominio ya está en uso.{" "}
+                  {/* Domain is already in use.{" "} */}
                   <a
                     className="underline"
-                    href="mailto:info@corewave.xyz?subject=My Domain Is Already In Use"
+                    href="mailto:info@corewave.xyz?subject=Mi Dominio Ya Está En Uso"
+                    // href="mailto:info@corewave.xyz?subject=My Domain Is Already In Use"
                   >
-                    Contact us
+                    Contáctanos
+                    {/* Contact us */}
                   </a>{" "}
-                  if you'd like to use this domain for your project.
+                  si quieres usar este dominio en tu proyecto.
+                  {/* if you'd like to use this domain for your project. */}
                 </p>
               ) : (
                 <p className="mt-2 text-sm text-red-600" id="domain-error">
@@ -266,7 +276,14 @@ function AddProjectModalHelper({
                 : "border-black bg-black text-white hover:bg-white hover:text-black"
             } flex h-10 w-full items-center justify-center rounded-md border text-sm transition-all focus:outline-none`}
           >
-            {saving ? <LoadingDots color="#808080" /> : <p>Add project</p>}
+            {saving ? (
+              <LoadingDots color="#808080" />
+            ) : (
+              <p>
+                Crear proyecto
+                {/* Add project */}
+              </p>
+            )}
           </button>
         </form>
       </div>

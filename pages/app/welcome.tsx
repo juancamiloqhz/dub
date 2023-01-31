@@ -32,7 +32,10 @@ export default function Welcome() {
 
   return (
     <div className="flex h-screen flex-col items-center">
-      <Meta title="Welcome to CoreWave" />
+      <Meta
+        title="Bienvenido a CoreWave"
+        // title="Welcome to CoreWave"
+      />
       <Background />
       <AddProjectModal />
       <AddEditLinkModal />

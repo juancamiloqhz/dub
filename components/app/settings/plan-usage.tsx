@@ -46,13 +46,17 @@ export default function PlanUsage() {
     <div className="rounded-lg border border-gray-200 bg-white">
       <UpgradePlanModal />
       <div className="flex flex-col space-y-3 p-10">
-        <h2 className="text-xl font-medium">Plan &amp; Usage</h2>
+        <h2 className="text-xl font-medium">
+          Plan &amp; Uso
+          {/* Plan &amp; Usage */}
+        </h2>
         <p className="text-sm text-gray-500">
-          You are currently on the{" "}
+          Actualmente estás en el plan {/* You are currently on the */}{" "}
           {plan ? (
             <span
               className={`capitalize ${
-                plan.startsWith("Enterprise")
+                // plan.startsWith("Enterprise")
+                plan.startsWith("Empresarial")
                   ? "border-violet-600 bg-violet-600 text-white"
                   : plan.startsWith("Pro")
                   ? "border-blue-500 bg-blue-500 text-white"
@@ -66,11 +70,11 @@ export default function PlanUsage() {
               load
             </span>
           )}{" "}
-          plan.
+          .{/* plan. */}
           {billingStart && billingEnd && (
             <>
               {" "}
-              Current billing cycle:{" "}
+              Ciclo de facturación actual: {/* Current billing cycle: */}{" "}
               <span className="font-medium text-black">
                 {billingStart} - {billingEnd}
               </span>
@@ -83,8 +87,14 @@ export default function PlanUsage() {
       <div className="grid grid-cols-1 divide-y divide-gray-200 sm:grid-cols-2 sm:divide-y-0 sm:divide-x">
         <div className="flex flex-col space-y-2 p-10">
           <div className="flex items-center">
-            <h3 className="font-medium">Total Link Clicks</h3>
-            <Tooltip content="Number of billable link clicks across all your projects.">
+            <h3 className="font-medium">
+              Clics Totales a Enlaces
+              {/* Total Link Clicks */}
+            </h3>
+            <Tooltip
+              content="Número de clics facturables en todos tus proyectos."
+              // content="Number of billable link clicks across all your projects."
+            >
               <div className="flex h-4 w-8 justify-center">
                 <QuestionCircle className="h-4 w-4 text-gray-600" />
               </div>
@@ -92,7 +102,9 @@ export default function PlanUsage() {
           </div>
           {!loading ? (
             <p className="text-sm text-gray-600">
-              {nFormatter(usage)} / {nFormatter(usageLimit)} clicks (
+              {/* {nFormatter(usage)} / {nFormatter(usageLimit)} clicks (
+              {((usage / usageLimit) * 100).toFixed(1)}%) */}
+              {nFormatter(usage)} / {nFormatter(usageLimit)} clics (
               {((usage / usageLimit) * 100).toFixed(1)}%)
             </p>
           ) : (
@@ -112,7 +124,10 @@ export default function PlanUsage() {
           </div>
         </div>
         <div className="p-10">
-          <h3 className="font-medium">Number of Projects</h3>
+          <h3 className="font-medium">
+            Número de Proyectos
+            {/* Number of Projects */}
+          </h3>
           <div className="mt-4 flex items-center">
             {projectCount ? (
               <p className="text-2xl font-semibold text-black">
@@ -135,16 +150,16 @@ export default function PlanUsage() {
             </p>
           ) : (
             <p className="text-sm text-gray-500">
-              {plan === "Free" ? "For " : "To "}
+              {plan === "Gratuito" ? "For " : "To "}
               <Tooltip content={<ProTiers usageLimit={usageLimit} />}>
                 {/* TODO - a simpler version of the homepage slider */}
                 <span className="cursor-default font-medium text-gray-700 underline underline-offset-2 hover:text-black">
-                  {plan === "Free"
+                  {plan === "Gratuito"
                     ? "increased limits"
                     : "change your monthly click limits"}
                 </span>
               </Tooltip>
-              {plan === "Free"
+              {plan === "Gratuito"
                 ? ", upgrade to a Pro subscription."
                 : ", manage your subscription on Stripe."}
             </p>
@@ -153,7 +168,7 @@ export default function PlanUsage() {
           <div className="h-3 w-28 animate-pulse rounded-full bg-gray-200" />
         )}
         {plan ? (
-          plan === "Free" ? (
+          plan === "Gratuito" ? (
             <button
               onClick={() => {
                 setShowUpgradePlanModal(true);

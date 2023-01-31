@@ -10,26 +10,35 @@ export default function Login() {
   const [signInClicked, setSignInClicked] = useState(false);
   const [noSuchAccount, setNoSuchAccount] = useState(false);
   const [email, setEmail] = useState("");
-  const [buttonText, setButtonText] = useState("Send magic link");
+  const [buttonText, setButtonText] = useState("Enviar enlace mágico");
+  // const [buttonText, setButtonText] = useState("Send magic link");
 
   return (
     <div className="flex h-screen w-screen items-center justify-center bg-gray-50">
-      <Meta title="Sign in to CoreWave" />
+      <Meta
+        title="Iniciar sesión en CoreWave"
+        // title="Sign in to CoreWave"
+      />
       <Background />
       <div className="z-10 w-full max-w-md overflow-hidden rounded-2xl border border-gray-100 shadow-xl">
         <div className="flex flex-col items-center justify-center space-y-3 border-b border-gray-200 bg-white px-4 py-6 pt-8 text-center sm:px-16">
           <a href="https://corewave.xyz">
             <BlurImage
               src="/_static/logo.png"
-              alt="CoreWave logo"
+              // alt="CoreWave logo"
+              alt="Logo de CoreWave"
               className="h-10 w-10 rounded-full"
               width={20}
               height={20}
             />
           </a>
-          <h3 className="text-xl font-semibold">Sign In</h3>
+          <h3 className="text-xl font-semibold">
+            Iniciar sesión
+            {/* Sign In */}
+          </h3>
           <p className="text-sm text-gray-500">
-            Use your email address to sign in.
+            Usa tu dirección de correo electrónico para iniciar sesión.
+            {/* Use your email address to sign in. */}
           </p>
         </div>
         <form
@@ -50,9 +59,11 @@ export default function Login() {
                   setSignInClicked(false);
                   if (res?.ok && !res?.error) {
                     setEmail("");
-                    setButtonText("Email sent - check your inbox!");
+                    setButtonText("Correo enviado - revisa tu correo!");
+                    // setButtonText("Email sent - check your inbox!");
                   } else {
-                    setButtonText("Error sending email - try again?");
+                    setButtonText("Error enviando correo - intentar de nuevo?");
+                    // setButtonText("Error sending email - try again?");
                   }
                 });
               } else {
@@ -65,13 +76,14 @@ export default function Login() {
         >
           <div>
             <label htmlFor="email" className="block text-xs text-gray-600">
-              EMAIL ADDRESS
+              CORREO ELECTRÓNICO
+              {/* EMAIL ADDRESS */}
             </label>
             <input
               id="email"
               name="email"
               type="email"
-              placeholder="panic@thedis.co"
+              placeholder="juan@corewave.xyz"
               autoComplete="email"
               required
               value={email}
@@ -98,19 +110,23 @@ export default function Login() {
           </button>
           {noSuchAccount ? (
             <p className="text-center text-sm text-red-500">
-              No such account.{" "}
+              No existe una cuenta con ese correo electrónico.{" "}
+              {/* No such account.{" "} */}
               <Link href="/register" className="font-semibold text-red-600">
-                Sign up
+                Registrarse
+                {/* Sign up */}
               </Link>{" "}
-              instead?
+              ?{/* instead? */}
             </p>
           ) : (
             <p className="text-center text-sm text-gray-600">
-              Don't have an account?{" "}
+              No tienes una cuenta? {/* Don't have an account?{" "} */}
               <Link href="/register" className="font-semibold text-gray-800">
-                Sign up
+                Regístrate
+                {/* Sign up */}
               </Link>{" "}
-              for free.
+              gratis.
+              {/* for free. */}
             </p>
           )}
         </form>

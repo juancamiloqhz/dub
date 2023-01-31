@@ -8,17 +8,23 @@ const TabsHelper = (router: NextRouter): { name: string; href: string }[] => {
     key?: string;
   };
   if (key) {
-    return [{ name: "← All Links", href: `/${slug || "links"}` }];
+    return [{ name: "← Todos los enlaces", href: `/${slug || "links"}` }];
+    // return [{ name: "← All Links", href: `/${slug || "links"}` }];
   } else if (slug) {
     return [
-      { name: "Links", href: `/${slug}` },
-      { name: "Settings", href: `/${slug}/settings` },
+      { name: "Enlaces", href: `/${slug}` },
+      { name: "Configuración", href: `/${slug}/settings` },
+      // { name: "Links", href: `/${slug}` },
+      // { name: "Settings", href: `/${slug}/settings` },
     ];
   }
   return [
-    { name: "Projects", href: `/` },
-    { name: "CoreWave Links", href: `/links` },
-    { name: "Settings", href: `/settings` },
+    { name: "Proyectos", href: `/` },
+    { name: "Enlaces", href: `/links` },
+    { name: "Configuración", href: `/settings` },
+    // { name: "Projects", href: `/` },
+    // { name: "CoreWave Links", href: `/links` },
+    // { name: "Settings", href: `/settings` },
   ];
 };
 

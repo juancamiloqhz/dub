@@ -10,7 +10,8 @@ export default function Login() {
   const [signInClicked, setSignInClicked] = useState(false);
   const [accountExists, setAccountExists] = useState(false);
   const [email, setEmail] = useState("");
-  const [buttonText, setButtonText] = useState("Send magic link");
+  // const [buttonText, setButtonText] = useState("Send magic link");
+  const [buttonText, setButtonText] = useState("Enviar enlace mágico");
 
   return (
     <div className="flex h-screen w-screen items-center justify-center bg-gray-50">
@@ -25,9 +26,13 @@ export default function Login() {
             width={20}
             height={20}
           />
-          <h3 className="text-xl font-semibold">Sign Up</h3>
+          <h3 className="text-xl font-semibold">
+            Registrarse
+            {/* Sign Up */}
+          </h3>
           <p className="text-sm text-gray-500">
-            Get started for free. No credit card required.
+            Comienza gratis. No se requiere tarjeta de crédito.
+            {/* Get started for free. No credit card required. */}
           </p>
         </div>
         <form
@@ -49,9 +54,11 @@ export default function Login() {
                   setSignInClicked(false);
                   if (res?.ok && !res?.error) {
                     setEmail("");
-                    setButtonText("Email sent - check your inbox!");
+                    setButtonText("Correo enviado - revisa tu correo!");
+                    // setButtonText("Email sent - check your inbox!");
                   } else {
-                    setButtonText("Error sending email - try again?");
+                    setButtonText("Error enviando correo - intentar de nuevo?");
+                    // setButtonText("Error sending email - try again?");
                   }
                 });
               } else {
@@ -64,13 +71,14 @@ export default function Login() {
         >
           <div>
             <label htmlFor="email" className="block text-xs text-gray-600">
-              EMAIL ADDRESS
+              CORREO ELECTRÓNICO
+              {/* EMAIL ADDRESS */}
             </label>
             <input
               id="email"
               name="email"
               type="email"
-              placeholder="panic@thedis.co"
+              placeholder="juan@corewave.com"
               autoComplete="email"
               required
               value={email}
@@ -97,19 +105,23 @@ export default function Login() {
           </button>
           {accountExists ? (
             <p className="text-center text-sm text-red-500">
-              This email is already registered.{" "}
+              Este correo electrónico ya está registrado.{" "}
+              {/* This email is already registered.{" "} */}
               <Link href="/login" className="font-semibold text-red-600">
-                Log in
+                Iniciar sesión
+                {/* Log in */}
               </Link>{" "}
-              instead?
+              ?{/* instead? */}
             </p>
           ) : (
             <p className="text-center text-sm text-gray-600">
-              Already registered?{" "}
+              ¿Ya tienes estás registrado? {/* Already registered?{" "} */}
               <Link href="/login" className="font-semibold text-gray-800">
-                Sign in
+                Inicia sesión
+                {/* Sign in */}
               </Link>{" "}
-              to your account.
+              en tu cuenta.
+              {/* to your account. */}
             </p>
           )}
         </form>

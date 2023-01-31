@@ -10,13 +10,13 @@ import Hero from "@/components/home/hero";
 import Logos from "@/components/home/logos";
 import Pricing from "@/components/home/pricing";
 import HomeLayout from "@/components/layout/home";
-import OSS from "@/components/home/oss";
+// import OSS from "@/components/home/oss";
 import Testimonials from "@/components/home/testimonials";
-import getTweetsMetadata, { homepageTweets } from "@/lib/twitter";
+// import getTweetsMetadata, { homepageTweets } from "@/lib/twitter";
 
 export default function Home({
   userCount,
-  stars,
+  // stars,
   tweets,
 }: {
   userCount: number;
@@ -57,7 +57,7 @@ export default function Home({
         <Features />
         <Testimonials userCount={userCount} tweets={tweets} />
         <Pricing />
-        <OSS stars={stars} />
+        {/* <OSS stars={stars} /> */}
       </div>
       <Background />
     </HomeLayout>
@@ -67,25 +67,25 @@ export default function Home({
 export async function getStaticProps() {
   const userCount = await prisma.user.count();
 
-  const { stargazers_count: stars } = await fetch(
-    "https://api.github.com/repos/juancamiloqhz/dub",
-    {
-      // optional – feel free to remove if you don't want to display star count
-      ...(process.env.GITHUB_OAUTH_TOKEN && {
-        headers: {
-          Authorization: `Bearer ${process.env.GITHUB_OAUTH_TOKEN}`,
-          "Content-Type": "application/json",
-        },
-      }),
-    },
-  ).then((res) => res.json());
+  // const { stargazers_count: stars } = await fetch(
+  //   "https://api.github.com/repos/juancamiloqhz/dub",
+  //   {
+  //     // optional – feel free to remove if you don't want to display star count
+  //     ...(process.env.GITHUB_OAUTH_TOKEN && {
+  //       headers: {
+  //         Authorization: `Bearer ${process.env.GITHUB_OAUTH_TOKEN}`,
+  //         "Content-Type": "application/json",
+  //       },
+  //     }),
+  //   },
+  // ).then((res) => res.json());
 
   // const tweets = await getTweetsMetadata(homepageTweets);
 
   return {
     props: {
       userCount,
-      stars,
+      // stars,
       tweets: [],
     },
     revalidate: 60,

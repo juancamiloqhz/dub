@@ -38,7 +38,7 @@ export default function HomeLayout({
                   height={236}
                   className="w-10"
                 />
-                <h2 className="font-bold text-2xl">CoreWave</h2>
+                <h2 className="text-2xl font-bold">CoreWave</h2>
               </Link>
             </div>
             <AnimatePresence>
@@ -52,7 +52,8 @@ export default function HomeLayout({
                   }
                   className="rounded-full border border-black bg-black py-1.5 px-5 text-sm text-white transition-all hover:bg-white hover:text-black"
                 >
-                  Sign in
+                  Iniciar sesión
+                  {/* Sign in */}
                 </motion.a>
               ) : (
                 <motion.a

@@ -108,7 +108,10 @@ function LinkQRModalHelper({
           ) : (
             <Logo className="h-10 w-10" />
           )}
-          <h3 className="text-lg font-medium">Download QR Code</h3>
+          <h3 className="text-lg font-medium">
+            Descargar código QR
+            {/* Download QR Code */}
+          </h3>
         </div>
 
         <div className="flex flex-col space-y-6 bg-gray-50 py-6 text-left sm:rounded-b-2xl">
@@ -140,14 +143,19 @@ function LinkQRModalHelper({
             <button
               onClick={async () => {
                 toast.promise(copyToClipboard(), {
-                  loading: "Copying...",
-                  success: "Copied!",
-                  error: "Failed to copy",
+                  loading: "Copiando...",
+                  success: "Copiado!",
+                  error: "Error al copiar",
+                  // loading: "Copying...",
+                  // success: "Copied!",
+                  // error: "Failed to copy",
                 });
               }}
               className="flex items-center justify-center gap-2 rounded-md border border-black bg-black py-1.5 px-5 text-sm text-white transition-all hover:bg-white hover:text-black"
             >
-              <Clipboard className="h-4 w-4" /> Copy
+              <Clipboard className="h-4 w-4" />
+              Copiar
+              {/* Copy */}
             </button>
             <QrDropdown
               download={download}
@@ -192,7 +200,10 @@ function AdvancedSettings({ qrData, setFgColor, setShowLogo }) {
               expanded ? "rotate-90" : ""
             } transition-all`}
           />
-          <p className="text-sm text-gray-600">Advanced options</p>
+          <p className="text-sm text-gray-600">
+            Opciones avanzadas
+            {/* Advanced options */}
+          </p>
         </button>
       </div>
       {expanded && (
@@ -208,8 +219,10 @@ function AdvancedSettings({ qrData, setFgColor, setShowLogo }) {
               <Tooltip
                 content={
                   <TooltipContent
-                    title="As a freemium product, we rely on word of mouth to spread the word about CoreWave. If you'd like to remove the CoreWave logo/upload your own, please consider upgrading to a Pro plan."
-                    cta="Upgrade to Pro"
+                    title="Cómo producto freemium, dependemos de la difusión boca a boca para que se conozca CoreWave. Si deseas eliminar el logo de CoreWave y cargar tu propio logo, considera actualizar a un plan Pro."
+                    // title="As a freemium product, we rely on word of mouth to spread the word about CoreWave. If you'd like to remove the CoreWave logo/upload your own, please consider upgrading to a Pro plan."
+                    cta="Actualizar a Pro"
+                    // cta="Upgrade to Pro"
                     ctaLink={isApp ? "/settings" : "/#pricing"}
                   />
                 }
@@ -222,7 +235,10 @@ function AdvancedSettings({ qrData, setFgColor, setShowLogo }) {
                     thumbTranslate="translate-x-6"
                     disabled={true}
                   />
-                  <p className="text-sm text-gray-600">Show CoreWave Logo</p>
+                  <p className="text-sm text-gray-600">
+                    Mostrar logo de CoreWave
+                    {/* Show CoreWave Logo */}
+                  </p>
                 </div>
               </Tooltip>
             ) : (
@@ -233,7 +249,10 @@ function AdvancedSettings({ qrData, setFgColor, setShowLogo }) {
                   thumbDimensions="w-5 h-5"
                   thumbTranslate="translate-x-6"
                 />
-                <p className="text-sm text-gray-600">Show CoreWave Logo</p>
+                <p className="text-sm text-gray-600">
+                  Mostrar logo de CoreWave
+                  {/* Show CoreWave Logo */}
+                </p>
               </div>
             )}
           </div>
@@ -242,7 +261,8 @@ function AdvancedSettings({ qrData, setFgColor, setShowLogo }) {
               htmlFor="color"
               className="block text-sm font-medium text-gray-700"
             >
-              Foreground Color
+              Color
+              {/* Foreground Color */}
             </label>
             <div className="relative mt-1 flex h-9 w-48 rounded-md shadow-sm">
               <Tooltip
@@ -333,7 +353,8 @@ function QrDropdown({ download, qrData, showLogo, logo }) {
           className="flex w-full items-center justify-center gap-2 rounded-md border border-black bg-black py-1.5 px-5 text-sm text-white transition-all hover:bg-white hover:text-black"
         >
           <Download />
-          Export
+          Exportar
+          {/* Export */}
         </button>
       </Popover>
     </>

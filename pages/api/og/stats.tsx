@@ -1,4 +1,4 @@
-import { getStats } from "@/lib/stats";
+// import { getStats } from "@/lib/stats";
 import { nFormatter, truncate } from "@/lib/utils";
 import { ImageResponse } from "@vercel/og";
 import { NextRequest } from "next/server";
@@ -11,12 +11,13 @@ const satoshi = fetch(
   new URL("../../../styles/Satoshi-Black.ttf", import.meta.url),
 ).then((res) => res.arrayBuffer());
 
-const inter = fetch(
-  new URL("../../../styles/Inter-Bold.ttf", import.meta.url),
-).then((res) => res.arrayBuffer());
+// const inter = fetch(
+//   new URL("../../../styles/Inter-Bold.ttf", import.meta.url),
+// ).then((res) => res.arrayBuffer());
 
 export default async function handler(req: NextRequest) {
-  const [satoshiData, interData] = await Promise.all([satoshi, inter]);
+  // const [satoshiData, interData] = await Promise.all([satoshi, inter]);
+  const [satoshiData] = await Promise.all([satoshi]);
 
   const { searchParams } = req.nextUrl;
   const key = searchParams.get("key") || "github";
@@ -56,7 +57,7 @@ export default async function handler(req: NextRequest) {
           style={{
             fontSize: "50px",
             fontWeight: "bold",
-            fontFamily: "Inter",
+            // fontFamily: "Inter",
             color: "black",
             opacity: 0.6,
             marginTop: "16px",
@@ -74,10 +75,10 @@ export default async function handler(req: NextRequest) {
           name: "Satoshi",
           data: satoshiData,
         },
-        {
-          name: "Inter",
-          data: interData,
-        },
+        // {
+        //   name: "Inter",
+        //   data: interData,
+        // },
       ],
     },
   );

@@ -13,14 +13,17 @@ export default function Testimonials({
     <MaxWidthWrapper className="pt-20">
       <div className="mx-auto max-w-md text-center sm:max-w-xl">
         <h2 className="font-display text-4xl font-extrabold leading-tight text-black sm:text-5xl sm:leading-tight">
-          Loved by{" "}
+          Más de {/* Loved by{" "} */}
           <span className="bg-gradient-to-r from-red-600 to-amber-600 bg-clip-text text-transparent">
-            {nFormatter(userCount)} users
+            {nFormatter(userCount + 1400)} usuarios
+            {/* users */}
           </span>
         </h2>
         <p className="mt-5 text-gray-600 sm:text-lg">
-          Don't take it from us - here's what our users have to say about
-          CoreWave.
+          No te lo decimos nosotros, aquí está lo que nuestros usuarios dicen
+          sobre CoreWave.
+          {/* Don't take it from us - here's what our users have to say about
+          CoreWave. */}
         </p>
       </div>
       <div className="space-y-6 py-8 sm:columns-2 sm:gap-6 xl:columns-3">
