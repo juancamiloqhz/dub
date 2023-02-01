@@ -31,14 +31,12 @@ export default function HomeLayout({
             <div className="flex items-center">
               <Link href="/" className="flex items-center gap-1">
                 <Image
-                  // src="/_static/logotype.svg"
-                  src="/_static/corewavelogo.svg"
+                  src="/_static/logotype.svg"
                   alt="CoreWave logo"
                   width={834}
                   height={236}
-                  className="w-10"
+                  className="w-36"
                 />
-                <h2 className="text-2xl font-bold">CoreWave</h2>
               </Link>
             </div>
             <AnimatePresence>

@@ -1,25 +1,31 @@
 export default function Logo({ className }: { className: string }) {
   return (
     <svg
-      width="191"
-      height="191"
-      fill="currentColor"
-      viewBox="0 0 191 191"
+      width="512"
+      height="512"
+      viewBox="0 0 135.46666 135.46667"
+      version="1.1"
+      id="svg5"
+      xmlSpace="preserve"
+      xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      <g clipPath="url(#clip0_928_108)">
-        <path
-          fill="currentColor"
-          fillRule="evenodd"
-          d="M122-14h22v27.215a94.965 94.965 0 00-22-9.49V-14zm0 17.725A95.548 95.548 0 0095.5 0C42.757 0 0 42.757 0 95.5S42.757 191 95.5 191 191 148.243 191 95.5c0-35.038-18.869-65.669-47-82.285V148h-22v-7.103A48.776 48.776 0 0195 149c-27.062 0-49-21.938-49-49s21.938-49 49-49a48.773 48.773 0 0127 8.103V3.725z"
-          clipRule="evenodd"
-        ></path>
+      <defs id="defs2" />
+      <g id="layer1">
+        <g
+          style={{ fill: "none", stroke: "currentColor", strokeWidth: 0 }}
+          id="g102"
+          transform="matrix(6.6851383,0,0,6.6851383,-12.488326,-12.488326)"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="m 6,15.2348 6,3.3333 6,-3.3333 V 8.76521 L 12,5.43188 6,8.76521 Z M 12,2 3,7 v 10 l 9,5 9,-5 V 7 Z"
+            fill="currentColor"
+            id="path93"
+          />
+        </g>
       </g>
-      <defs>
-        <clipPath id="clip0_928_108">
-          <rect width="191" height="191" fill="#fff" rx="95.5"></rect>
-        </clipPath>
-      </defs>
     </svg>
   );
 }
