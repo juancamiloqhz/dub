@@ -5,7 +5,7 @@ import { getClicksUsage } from "@/lib/tinybird";
 import { getFirstAndLastDay, log } from "@/lib/utils";
 
 export const updateUsage = async () => {
-  await log(`Usage cron executed at ${new Date()}`, "cron");
+  // await log(`Usage cron executed at ${new Date()}`, "cron");
   const users = await prisma.user.findMany({
     where: {
       NOT: {

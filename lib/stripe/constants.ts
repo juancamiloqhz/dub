@@ -13,15 +13,15 @@ export const PRO_TIERS = [
       monthly: {
         amount: 9,
         priceIds: {
-          test: "price_1LoytoAlJJEpqkPV2oPcQ63m",
-          production: "price_1LodNLAlJJEpqkPVQSrt33Lc",
+          test: "price_1MWojZJXR462Talg7b9FTdez",
+          production: "price_1MWojZJXR462Talg7b9FTdez",
         },
       },
       yearly: {
         amount: 90,
         priceIds: {
-          test: "price_1LoytoAlJJEpqkPVsWjM4tB9",
-          production: "price_1LodNLAlJJEpqkPVRxUyCQgZ",
+          test: "price_1MWojZJXR462TalgzHlGUstt",
+          production: "price_1MWojZJXR462TalgzHlGUstt",
         },
       },
     },
@@ -33,15 +33,15 @@ export const PRO_TIERS = [
       monthly: {
         amount: 19,
         priceIds: {
-          test: "price_1LoytHAlJJEpqkPVonefD3RW",
-          production: "price_1LodMrAlJJEpqkPVq3XV2Y3R",
+          test: "price_1MWomxJXR462TalgThWDnKJS",
+          production: "price_1MWomxJXR462TalgThWDnKJS",
         },
       },
       yearly: {
         amount: 190,
         priceIds: {
-          test: "price_1LoytHAlJJEpqkPVP25C5yjd",
-          production: "price_1LodMrAlJJEpqkPViKR29tq8",
+          test: "price_1MWomxJXR462Talg8uwHfn9B",
+          production: "price_1MWomxJXR462Talg8uwHfn9B",
         },
       },
     },
@@ -53,15 +53,15 @@ export const PRO_TIERS = [
       monthly: {
         amount: 29,
         priceIds: {
-          test: "price_1LoyrzAlJJEpqkPVVZfXIZE5",
-          production: "price_1LodMEAlJJEpqkPVrMdRwaSk",
+          test: "price_1MWonjJXR462Talgp4jgch8D",
+          production: "price_1MWonjJXR462Talgp4jgch8D",
         },
       },
       yearly: {
         amount: 290,
         priceIds: {
-          test: "price_1LoyrzAlJJEpqkPVtCBUz78P",
-          production: "price_1LodMEAlJJEpqkPV5ztz7wyg",
+          test: "price_1MWoo3JXR462TalgdOavOE6V",
+          production: "price_1MWoo3JXR462TalgdOavOE6V",
         },
       },
     },
@@ -73,15 +73,15 @@ export const PRO_TIERS = [
       monthly: {
         amount: 49,
         priceIds: {
-          test: "price_1LoyrCAlJJEpqkPVZ32BV3wm",
-          production: "price_1LodLoAlJJEpqkPV9rD0rlNL",
+          test: "price_1MWop6JXR462TalgQicfQuNo",
+          production: "price_1MWop6JXR462TalgQicfQuNo",
         },
       },
       yearly: {
         amount: 490,
         priceIds: {
-          test: "price_1LoyrCAlJJEpqkPVgIlNG23q",
-          production: "price_1LodLoAlJJEpqkPVJdwv5zrG",
+          test: "price_1MWop6JXR462TalgsLse4hE3",
+          production: "price_1MWop6JXR462TalgsLse4hE3",
         },
       },
     },
@@ -93,15 +93,15 @@ export const PRO_TIERS = [
       monthly: {
         amount: 79,
         priceIds: {
-          test: "price_1LoyqQAlJJEpqkPVGy7kyuxS",
-          production: "price_1LodLIAlJJEpqkPVi7javvun",
+          test: "price_1MWopyJXR462TalgB5U4m7oq",
+          production: "price_1MWopyJXR462TalgB5U4m7oq",
         },
       },
       yearly: {
         amount: 790,
         priceIds: {
-          test: "price_1LoyqQAlJJEpqkPVdWYVpS76",
-          production: "price_1LodLIAlJJEpqkPValZ9TmgF",
+          test: "price_1MWopzJXR462TalgXMqQHQPM",
+          production: "price_1MWopzJXR462TalgXMqQHQPM",
         },
       },
     },
@@ -113,15 +113,15 @@ export const PRO_TIERS = [
       monthly: {
         amount: 99,
         priceIds: {
-          test: "price_1Lis30AlJJEpqkPVAuSVxbT1",
-          production: "price_1Lis1VAlJJEpqkPV7sUnggB3",
+          test: "price_1MWoqxJXR462Talg9yDa9aAI",
+          production: "price_1MWoqxJXR462Talg9yDa9aAI",
         },
       },
       yearly: {
         amount: 990,
         priceIds: {
-          test: "price_1LoymUAlJJEpqkPVDX9fNCu7",
-          production: "price_1LodJMAlJJEpqkPV2K0xX2kF",
+          test: "price_1MWoqxJXR462TalgIqy4ZUEc",
+          production: "price_1MWoqxJXR462TalgIqy4ZUEc",
         },
       },
     },
