@@ -93,7 +93,7 @@ function AddProjectModalHelper({
           <BlurImage
             src={`/_static/logo.png`}
             alt={"corewave.xyz"}
-            className="h-10 w-10 rounded-full border border-gray-200"
+            className="h-10 w-10 rounded-full"
             width={20}
             height={20}
           />

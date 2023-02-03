@@ -16,7 +16,7 @@ const Demo = () => {
   const [showDefaultLink, setShowDefaultLink] = useState(true);
 
   return (
-    <div className="mx-auto w-full max-w-md px-2.5 sm:px-0">
+    <div className="mx-auto w-full max-w-lg px-2.5 sm:px-0">
       <Toaster />
       <form
         onSubmit={async (e) => {
@@ -41,29 +41,29 @@ const Demo = () => {
           <Tooltip
             content={
               <TooltipContent
-              //   title="Maximum number of links reached. Swipe to delete existing links or
-              // create a free account."
-              //   cta="Start For Free"
-                title="Número máximo de enlaces alcanzado. Deslice para eliminar enlaces existentes o
-                cree una cuenta gratuita."
+                //   title="Maximum number of links reached. Swipe to delete existing links or
+                // create a free account."
+                //   cta="Start For Free"
+                title="Número máximo de enlaces alcanzado. Desliza para eliminar enlaces existentes o
+                crea una cuenta gratuita."
                 cta="Comienza Gratis"
                 ctaLink="https://app.corewave.xyz/register"
               />
             }
           >
             <div className="relative flex w-full items-center">
-              <div className="block w-full rounded-md border border-gray-200 bg-white p-2 pl-3 pr-12 text-sm text-gray-400 shadow-lg focus:border-black">
+              <div className="block w-full rounded-md border border-gray-200 bg-white p-3 pl-3 pr-12 text-sm text-gray-400 shadow-lg focus:border-black">
                 {/* Shorten your link */}
                 Acorta tu enlace
               </div>
-              <div className="absolute inset-y-0 right-0 my-1.5 mr-1.5 flex w-10 cursor-not-allowed items-center justify-center rounded border border-gray-200 font-sans text-sm font-medium text-gray-400">
+              <div className="absolute inset-y-0 right-0 top-1/2 mr-1.5 flex w-10 -translate-y-1/2 cursor-not-allowed items-center justify-center rounded border border-gray-200 font-sans text-sm font-medium text-gray-400">
                 <p>↵</p>
               </div>
             </div>
           </Tooltip>
         ) : (
           <div className="relative flex items-center">
-            <Link className="absolute inset-y-0 left-0 my-2 ml-3 w-5 text-gray-400" />
+            <Link className="absolute inset-y-0 left-0 top-1/2 ml-3 w-5 -translate-y-1/2 text-gray-400" />
             <input
               type="url"
               // placeholder="Shorten your link"
@@ -73,7 +73,7 @@ const Demo = () => {
                 setUrl((e.target as HTMLInputElement).value);
               }}
               required
-              className="peer block w-full rounded-md border border-gray-200 bg-white p-2 pl-10 pr-12 text-sm shadow-lg focus:border-black focus:outline-none focus:ring-0"
+              className="peer block w-full rounded-md border border-gray-200 bg-white p-3 pl-10 pr-12 text-sm shadow-lg focus:border-black focus:outline-none focus:ring-0"
             />
             <button
               type="submit"
@@ -106,9 +106,9 @@ const Demo = () => {
       >
         {showDefaultLink && (
           <LinkCard
-            key="github"
-            _key="github"
-            url="https://github.com/juancamiloqhz/dub"
+            key="lanzamiento"
+            _key="lanzamiento"
+            url="https://corewave.xyz/lanzamiento"
             hashes={hashes}
             setHashes={setHashes}
             setShowDefaultLink={setShowDefaultLink}
@@ -133,7 +133,8 @@ const Demo = () => {
           className="rounded-md border border-gray-200 bg-white p-3 text-sm text-gray-500 shadow-lg"
         >
           {/* Note: Public links will be automatically-deleted after 30 minutes.{" "} */}
-          Nota: los enlaces públicos se eliminarán automáticamente después de 30 minutos.{" "}
+          Nota: los enlaces públicos se eliminarán automáticamente después de 30
+          minutos.{" "}
           <a
             href="https://app.corewave.xyz/register"
             target="_blank"

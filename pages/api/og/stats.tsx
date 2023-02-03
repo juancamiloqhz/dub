@@ -20,7 +20,7 @@ export default async function handler(req: NextRequest) {
   const [satoshiData] = await Promise.all([satoshi]);
 
   const { searchParams } = req.nextUrl;
-  const key = searchParams.get("key") || "github";
+  const key = searchParams.get("key") || "lanzamiento";
   const clicks = searchParams.get("clicks") || "12702";
 
   return new ImageResponse(
@@ -63,7 +63,8 @@ export default async function handler(req: NextRequest) {
             marginTop: "16px",
           }}
         >
-          {nFormatter(parseInt(clicks))} TOTAL CLICKS
+          {nFormatter(parseInt(clicks))} CLICS TOTALES
+          {/* {nFormatter(parseInt(clicks))} TOTAL CLICKS */}
         </p>
       </div>
     ),

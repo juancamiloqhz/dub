@@ -87,6 +87,7 @@ export const RESERVED_KEYS = new Set([
   "new",
   "info",
   "demo",
+  "presentamos-corewave",
 ]);
 export const DEFAULT_REDIRECTS = {
   home: "https://corewave.xyz",

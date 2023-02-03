@@ -150,8 +150,8 @@ const GlobeAnimation = ({ markers }: { markers: MarkerProps[] }) => {
               en tiempo real. {/* in real time. */}
             </p>
             <Link
-              href={{ pathname: "/", query: { key: "github" } }}
-              as="/stats/github"
+              href={{ pathname: "/", query: { key: "lanzamiento" } }}
+              as="/stats/lanzamiento"
               shallow
               scroll={false}
               className="mx-auto mt-2 block max-w-fit rounded-full border border-black bg-black px-4 py-1.5 text-sm text-white hover:bg-white hover:text-black sm:mt-4"

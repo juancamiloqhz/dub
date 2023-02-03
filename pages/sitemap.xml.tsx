@@ -16,6 +16,9 @@ function generateSiteMap({
        <url>
          <loc>${hostname}/metatags</loc>
        </url>
+       <url>
+         <loc>${hostname}/lanzamiento</loc>
+       </url>
        ${links
          .map(({ key }) => {
            return `
